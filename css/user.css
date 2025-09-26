@@ -75,3 +75,32 @@ a.hpb-parts-blist-style:active
         opacity: 1.0;
 background-image : url(../images/hedderimage_00.png);
 }
+
+/* スマホ表示対応 */
+@media (max-width: 768px) {
+    /* 3つの特徴セクションをスマホで縦並びに */
+    .features-table {
+        display: block !important;
+        width: 100% !important;
+    }
+    
+    .features-table tbody,
+    .features-table tr {
+        display: block !important;
+        width: 100% !important;
+    }
+    
+    .features-table td {
+        display: block !important;
+        width: 100% !important;
+        text-align: center !important;
+        margin-bottom: 20px;
+        padding: 10px;
+    }
+    
+    .features-table img {
+        max-width: 280px;
+        width: 100%;
+        height: auto;
+    }
+}
