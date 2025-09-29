@@ -103,4 +103,14 @@ background-image : url(../images/hedderimage_00.png);
         width: 100%;
         height: auto;
     }
+    
+    /* スマホでのフォントサイズ調整 */
+    .features-table font[size="+3"] {
+        font-size: 18px !important;
+    }
+    
+    .features-table font[size="+1"] {
+        font-size: 14px !important;
+        line-height: 1.5;
+    }
 }
