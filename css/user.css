@@ -181,4 +181,13 @@ background-image : url(../images/hedderimage_00.png);
         clear: both;
         height: 20px;
     }
+    
+    /* 免許画像セクションとご挨拶セクションの間隔調整 */
+    #hpb-title {
+        margin-bottom: 30px;
+    }
+    
+    #hpb-main {
+        margin-top: 20px;
+    }
 }
