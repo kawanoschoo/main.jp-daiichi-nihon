@@ -108,7 +108,7 @@ background-image : url(../images/hedderimage_00.png);
     
     /* 1行目の各tdに対応するタイトルと説明を疑似要素で追加 */
     .features-table tr:first-child td:nth-child(1)::after {
-        content: "施術者目線の運営\A開業20年以上の現役の柔整師・鍼灸師が役員を務めておりますので、堅実かつ的確なサポートが可能です。";
+        content: "開業20年以上の現役の柔整師・鍼灸師が役員を務めておりますので、堅実かつ的確なサポートが可能です。";
         white-space: pre-line;
         display: block;
         margin-top: 15px;
@@ -126,7 +126,7 @@ background-image : url(../images/hedderimage_00.png);
     }
     
     .features-table tr:first-child td:nth-child(2)::after {
-        content: "万全のサポート体制\A複雑な返戻相談から、万が一の医療過誤の相談まで懇切丁寧に対応いたします。保険者との折衝も会にお任せ下さい。";
+        content: "複雑な返戻相談から、万が一の医療過誤の相談まで懇切丁寧に対応いたします。保険者との折衝も会にお任せ下さい。";
         white-space: pre-line;
         display: block;
         margin-top: 15px;
@@ -144,7 +144,7 @@ background-image : url(../images/hedderimage_00.png);
     }
     
     .features-table tr:first-child td:nth-child(3)::after {
-        content: "徹底した事前点検\A申請者の事前点検により、初歩的なミスによる返戻を未然に防ぎ、時間や手間の無駄を省きます。";
+        content: "申請者の事前点検により、初歩的なミスによる返戻を未然に防ぎ、時間や手間の無駄を省きます。";
         white-space: pre-line;
         display: block;
         margin-top: 15px;
