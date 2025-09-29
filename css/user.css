@@ -80,35 +80,68 @@ background-image : url(../images/hedderimage_00.png);
 @media (max-width: 768px) {
     /* 3つの特徴セクションをスマホで縦並びに */
     .features-table {
-        display: block !important;
+        display: flex !important;
+        flex-direction: column !important;
         width: 100% !important;
     }
     
     .features-table tbody,
     .features-table tr {
-        display: block !important;
+        display: flex !important;
+        flex-direction: column !important;
         width: 100% !important;
     }
     
+    .features-table tr:first-child {
+        order: 1;
+    }
+    
+    .features-table tr:nth-child(2) {
+        order: 2;
+    }
+    
+    .features-table tr:nth-child(3) {
+        order: 3;
+    }
+    
     .features-table td {
-        display: block !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
         width: 100% !important;
         text-align: center !important;
         margin-bottom: 20px;
         padding: 10px;
     }
     
+    /* 各列を縦に並べる */
+    .features-table td:nth-child(1) {
+        order: 1;
+    }
+    
+    .features-table td:nth-child(2) {
+        order: 2;
+    }
+    
+    .features-table td:nth-child(3) {
+        order: 3;
+    }
+    
     .features-table img {
         max-width: 280px;
         width: 100%;
         height: auto;
+        margin-bottom: 10px;
     }
     
-    /* スマホでのフォントサイズ調整 */
+    /* タイトルのスタイル調整 */
     .features-table font[size="+3"] {
         font-size: 18px !important;
+        margin-bottom: 10px;
+        display: block;
     }
     
+    /* 説明文のスタイル調整 */
     .features-table font[size="+1"] {
         font-size: 14px !important;
         line-height: 1.5;
