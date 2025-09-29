@@ -167,4 +167,18 @@ background-image : url(../images/hedderimage_00.png);
         height: auto;
         margin-bottom: 10px;
     }
+    
+    /* レイアウト崩れを防ぐための最低限の修正 */
+    .features-table {
+        height: auto !important;
+        margin-bottom: 30px;
+    }
+    
+    /* 後続要素との適切な間隔を確保 */
+    .features-table::after {
+        content: "";
+        display: block;
+        clear: both;
+        height: 20px;
+    }
 }
