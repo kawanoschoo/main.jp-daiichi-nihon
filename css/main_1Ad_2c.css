@@ -474,7 +474,7 @@ input.s {
 }
 @media screen and (max-width: 568px) {
   .hpb-header-inner .hpb-header-inner-block1 #hpb-headerLogo a img {
-    width: 200px;
+    width: 90%;
     display: block;
   }
 }
@@ -490,7 +490,7 @@ input.s {
 }
 @media screen and (max-width: 568px) {
   .hpb-header-inner .hpb-header-inner-block2 a.tel img {
-    width: 160px;
+    width: 70%;
   }
 }
 .hpb-header-inner .hpb-header-inner-block2 a.mail-sp img {
