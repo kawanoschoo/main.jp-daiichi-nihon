@@ -460,6 +460,12 @@ input.s {
     color: #fff;
   }
 }
+@media screen and (max-width: 568px) {
+  .header-width {
+    width: 100vw !important;
+  }
+}
+
 #hpb-header {
   padding-bottom: 0 !important;
 }

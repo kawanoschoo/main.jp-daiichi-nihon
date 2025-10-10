@@ -452,6 +452,11 @@ input.s {
 }
 
 // 2025/10 コンパス追加（レスポンシブ対応）
+.header-width {
+    @media screen and (max-width: 568px) {
+        width: 100vw!important;
+    }
+}
 #hpb-header {
     padding-bottom: 0!important;
 }
