@@ -460,6 +460,13 @@ input.s {
 #hpb-header {
     padding-bottom: 0!important;
 }
+
+// TOP画像
+#hpb-slideshow1 {
+    @media screen and (max-width: 568px) {
+        display: none!important;
+    }
+}
 .hpb-header-inner {
     width: 95%;
     max-width: 1000px;

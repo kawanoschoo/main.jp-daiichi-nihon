@@ -470,6 +470,12 @@ input.s {
   padding-bottom: 0 !important;
 }
 
+@media screen and (max-width: 568px) {
+  #hpb-slideshow1 {
+    display: none !important;
+  }
+}
+
 .hpb-header-inner {
   width: 95%;
   max-width: 1000px;
