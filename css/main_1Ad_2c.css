@@ -471,6 +471,12 @@ input.s {
 }
 
 @media screen and (max-width: 568px) {
+  .hpb-photomotion {
+    padding-top: 80px !important;
+  }
+}
+
+@media screen and (max-width: 568px) {
   #hpb-slideshow1 {
     display: none !important;
   }

@@ -461,7 +461,13 @@ input.s {
     padding-bottom: 0!important;
 }
 
-// TOP画像
+// TOP画像 スマホ PC
+.hpb-photomotion {
+    @media screen and (max-width: 568px) {
+        padding-top: 80px!important;
+    }
+}
+// TOP画像 スマホ
 #hpb-slideshow1 {
     @media screen and (max-width: 568px) {
         display: none!important;
