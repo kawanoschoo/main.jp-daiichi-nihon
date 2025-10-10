@@ -1,0 +1,77 @@
+@charset "Shift_JIS";
+
+/*--------------------------------------------------------
+  フルCSSプロフェッショナルテンプレート部品設定
+--------------------------------------------------------*/
+
+.hpb-parts-cnt-style
+{
+    border-color: #3C7C00;
+}
+
+.hpb-parts-hl-style
+{
+    border-color: #3C7C00;
+}
+
+.hpb-parts-cbox-style
+{
+    border-color: #3C7C00;
+}
+
+.hpb-parts-hr-style
+{
+    border-color: #3C7C00;
+}
+
+.hpb-parts-pbox-style
+{
+    background-color: #f4f4f4;
+    border-color: #dddddd;
+}
+.hpb-parts-pbox-style h4
+{
+    padding: 0px !important;
+}
+.hpb-parts-pbox-style img
+{
+    background-color: #f4f4f4;
+}
+
+.hpb-parts-blist-style
+{
+    background-color: #f3f3f3;
+    border-color: #3C7A01;
+}
+a.hpb-parts-blist-style:link
+{
+    color: #666666;
+}
+a.hpb-parts-blist-style:visited
+{
+    color: #666666;
+}
+a.hpb-parts-blist-style:hover
+{
+    color: #3C7A01;
+}
+a.hpb-parts-blist-style:active
+{
+    color: #3C7A01;
+}
+
+/*--------------------------------------------------------
+  ユーザー設定スタイル
+--------------------------------------------------------*/
+/*ついてくるトップボタン*/
+.nav{
+	white-space: nowrap;
+    position: fixed;
+    width: 100%;
+    z-index: 10000;
+	/*background-image : url(../images/hedderimage_00.png);ボタン部分の繰り返し背景画像*/
+	/*background-repeat: repeat-x;/*ボタン部分の繰り返し背景画像（no-repeatにするとセンター配置）*/
+	background-position: left top;/*背景センター配置のときはこの行は削除*/
+        opacity: 1.0;
+background-image : url(../images/hedderimage_00.png);
+}

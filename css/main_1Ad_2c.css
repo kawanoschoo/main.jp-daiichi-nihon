@@ -1,0 +1,578 @@
+@charset "UTF-8";
+/*--------------------------------------------------------
+  共通レイアウトパーツ設定
+--------------------------------------------------------*/
+/* ヘッダーパーツ */
+#hpb-headerMain {
+  height: 19px;
+  margin: 0 auto;
+}
+
+#hpb-headerMain h1 {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  font-weight: normal;
+  line-height: 18px;
+  font-size: 10px;
+  color: #ffffff; /* ヘッダー内の文字色設定 */
+}
+
+#hpb-headerLogo {
+  width: auto;
+  float: left;
+}
+
+#hpb-headerLogoRight {
+  width: 400px;
+  float: right;
+}
+
+#hpb-headerLogo b {
+  display: block;
+  margin: 0;
+  padding: 0;
+  text-indent: -9999px;
+  overflow: hidden;
+  height: 75px;
+}
+
+#hpb-headerExtra1 {
+  width: 330px;
+  margin: 0 10px 0 0;
+  padding-top: 20px;
+  float: right;
+}
+
+#hpb-headerExtra1 p.tel {
+  /* 電話番号の表示設定 */
+  margin: 0;
+  padding: 0;
+  font-size: 1.7em;
+  font-weight: bold;
+  color: #6CBD1E;
+  line-height: 1.2;
+  text-align: right;
+}
+
+#hpb-headerExtra1 p.tel span {
+  /* 「TEL」部分の色設定 */
+  color: #CCCCCC;
+}
+
+#hpb-headerExtra1 p.address {
+  /* 住所表示の設定 */
+  margin: 0;
+  padding: 0;
+  line-height: 1.2;
+  text-align: right;
+}
+
+/* フッターパーツ */
+#hpb-footerMain {
+  width: 300px;
+  float: right;
+  padding-top: 35px;
+}
+
+#hpb-footerMain p {
+  /* コピーライト部分の設定 */
+  font-size: 0.8em;
+  text-align: right;
+}
+
+#hpb-footerExtra1 {
+  padding-top: 9px;
+}
+
+#hpb-footerExtra1 ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-align: left;
+}
+
+#hpb-footerExtra1 li {
+  /* フッターのリンク設定 */
+  display: inline;
+  background-image: url(../images/fpoint_1Ad.png);
+  background-position: 7px 4px;
+  background-repeat: no-repeat;
+  padding-left: 23px;
+  padding-right: 10px;
+  font-weight: bold;
+}
+
+#hpb-footerExtra1 a:link,
+#hpb-footerExtra1 a:visited {
+  color: #666666;
+  text-decoration: none;
+}
+
+#hpb-footerExtra1 a:hover,
+#hpb-footerExtra1 a:active {
+  color: #6CBD1E;
+  text-decoration: none;
+}
+
+/* サイドブロックパーツ */
+#banner {
+  margin-top: 15px;
+  background-color: #F4F4F4;
+  padding-top: 10px;
+}
+
+#banner ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+#banner li {
+  padding-bottom: 10px;
+}
+
+#banner li a {
+  display: block;
+  width: 200px;
+  height: 70px;
+  margin: 0 auto;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+
+#banner a#banner-service {
+  /* サービス案内バナー */
+  background-image: url(../images/top_banner_1Ad_01.png);
+  background-repeat: no-repeat;
+}
+
+#banner a#banner-recruit {
+  /* 採用情報バナー */
+  background-image: url(../images/top_banner_1Ad_02.png);
+  background-repeat: no-repeat;
+}
+
+#banner a#banner-access {
+  /* アクセス情報バナー */
+  background-image: url(../images/top_banner_1Ad_03.png);
+  background-repeat: no-repeat;
+}
+
+/*--------------------------------------------------------
+  ナビゲーションデザイン設定
+--------------------------------------------------------*/
+#hpb-nav li a {
+  font-weight: bold;
+}
+
+#hpb-nav li a:link,
+#hpb-nav li a:visited {
+  color: #666666;
+  text-decoration: none;
+}
+
+#hpb-nav li a:hover,
+#hpb-nav li a:active {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+#hpb-nav li span.en {
+  display: none;
+}
+
+/*--------------------------------------------------------
+  基本パーツデザイン設定
+--------------------------------------------------------*/
+/* リンクカラー設定 */
+a:link,
+a:visited {
+  color: #6CBD1E;
+  text-decoration: underline;
+}
+
+a:hover,
+a:active {
+  color: #6CBD1E;
+  text-decoration: none;
+}
+
+/* スキップリンク（非表示） */
+#hpb-skip {
+  height: 1px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  text-indent: -9999px;
+}
+
+/* 段落設定 */
+p {
+  margin: 0.5em 0 2em;
+  padding: 0 0.1em;
+  line-height: 1.4;
+  text-align: left;
+}
+
+p.large {
+  color: #3C7A01;
+  font-weight: bold;
+}
+
+p.indent {
+  padding-left: 25px;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+hr {
+  width: 100%;
+  height: 1px;
+  margin: 10px auto 20px;
+  border: none;
+  color: #ffffff;
+  clear: both;
+}
+
+/*--------------------------------------------------------
+  レイアウトデザイン設定
+--------------------------------------------------------*/
+.hpb-layoutset-02 h2 {
+  background-image: url(../images/content_title_1Ad.png);
+  width: 650px;
+  height: 50px;
+  margin: 0 auto 0.5em 0;
+  line-height: 57px;
+  text-align: left;
+  overflow: hidden;
+}
+
+.hpb-layoutset-02 h2 span.ja {
+  font-size: 1.15em;
+  color: #ffffff;
+  padding: 0 10px 0 18px;
+  line-height: 50px;
+}
+
+h2 span.en {
+  font-size: 0.9em;
+  color: #C4F493;
+}
+
+.hpb-layoutset-02 #hpb-wrapper h3 {
+  margin: 0.5em 0;
+  text-align: left;
+  padding: 3px 0 0 1px;
+  border-bottom: 2px solid #3C7C00;
+  font-size: 1.3em;
+  color: #3C7A01;
+}
+
+h3.hpb-c-index {
+  height: 1px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  text-indent: -9999px;
+}
+
+h4 {
+  margin: 0;
+  padding: 5px 10px 2px 2px;
+  text-align: left;
+  font-size: 1.1em;
+  color: #3C7A01;
+}
+
+h5 {
+  display: inline;
+  margin: 0;
+  padding: 4px 10px 2px 25px;
+  background-image: url(../images/point_1Ad.png);
+  background-position: 6px 8px;
+  background-repeat: no-repeat;
+  font-size: 1.1em;
+  color: #3C7A01;
+}
+
+/* テーブル設定 */
+table {
+  margin: 2px;
+  border-collapse: collapse;
+  border: none;
+  border-color: #417173;
+}
+
+table th {
+  padding: 8px 15px 8px 8px;
+  text-align: left;
+  background-color: #eeeeee;
+  border-right: 1px solid #cccccc;
+  border-bottom: 1px solid #cccccc;
+}
+
+table td {
+  padding: 8px;
+  text-align: left;
+  border-right: 1px solid #cccccc;
+  border-bottom: 1px solid #cccccc;
+}
+
+/* フォーム設定 */
+input.button {
+  margin: 10px 0 15px;
+}
+
+textarea {
+  width: 400px;
+  height: 200px;
+}
+
+input.l {
+  width: 400px;
+}
+
+input.m {
+  width: 250px;
+}
+
+input.s {
+  width: 150px;
+}
+
+/*--------------------------------------------------------
+  メインコンテンツ部分設定
+--------------------------------------------------------*/
+#hpb-main ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+#hpb-main ul li {
+  text-align: left;
+  line-height: 1.4;
+  padding: 10px 15px 10px 25px;
+  background-image: url(../images/point_1Ad.png);
+  background-position: 5px 12px;
+  background-repeat: no-repeat;
+  border-bottom: 1px dotted #DDDDDD;
+  color: #000000;
+}
+
+#pagetop {
+  margin: 10px auto 0;
+  text-align: right;
+}
+
+#pagetop a {
+  /* ページ上部へ戻るボタン */
+  display: block;
+  width: 125px;
+  height: 21px;
+  overflow: hidden;
+  background-image: url(../images/returnTop_1Ad.png);
+  background-repeat: no-repeat;
+  text-indent: -9999px;
+}
+
+/*--------------------------------------------------------
+  トップページ専用デザイン
+--------------------------------------------------------*/
+.hpb-layoutset-01 #hpb-title h2 {
+  margin: 0;
+  overflow: hidden;
+  text-indent: -9999px;
+  height: 235px;
+  background-image: url(../images/top_mainimg_1Ad_01.png);
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+#toppage-topics h3,
+#toppage-news h3 {
+  margin: 0.5em 0;
+  height: 26px;
+  overflow: hidden;
+  background-image: url(../images/top_indexBg_1Ad.png);
+  background-repeat: no-repeat;
+  line-height: 28px;
+  padding-left: 10px;
+  color: #ffffff;
+  font-size: 1.2em;
+}
+
+#toppage-news h3 span.ja {
+  display: none;
+}
+
+#hpb-inner #companyinfo {
+  padding: 0 0 10px;
+  background-color: #F3F3F3;
+}
+
+#hpb-inner #companyinfo h3 {
+  color: #FFFFFF;
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  background-color: #4C9D01;
+  font-size: 1em;
+}
+
+#hpb-inner #companyinfo p {
+  margin-bottom: 10px;
+  padding: 0 5px 0 15px;
+}
+
+/*--------------------------------------------------------
+  スマートフォン対応（レスポンシブ設定）
+--------------------------------------------------------*/
+@media screen and (max-width: 568px) {
+  /* 各種レイアウト調整 */
+  #hpb-headerMain {
+    height: auto;
+  }
+  #hpb-headerLogo, #hpb-headerExtra1 {
+    width: 98%;
+    float: none;
+    margin: 0 auto;
+  }
+  #hpb-footerMain {
+    width: 100%;
+    float: none;
+    background-color: #F3F3F3;
+  }
+  #banner a {
+    max-width: 100%;
+    background-size: contain;
+  }
+  .hpb-layoutset-02 h2 {
+    width: 100%;
+    background: #4da102;
+    color: #fff;
+  }
+}
+#hpb-header {
+  padding-bottom: 0 !important;
+}
+
+.hpb-header-inner {
+  width: 95%;
+  max-width: 1000px;
+  margin: auto;
+  padding-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 568px) {
+  .hpb-header-inner .hpb-header-inner-block1 #hpb-headerLogo a img {
+    width: 200px;
+    display: block;
+  }
+}
+@media screen and (max-width: 568px) {
+  .hpb-header-inner .hpb-header-inner-block2 {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+  }
+}
+.hpb-header-inner .hpb-header-inner-block2 a.tel img {
+  width: 250px;
+}
+@media screen and (max-width: 568px) {
+  .hpb-header-inner .hpb-header-inner-block2 a.tel img {
+    width: 160px;
+  }
+}
+.hpb-header-inner .hpb-header-inner-block2 a.mail-sp img {
+  width: 25px;
+  height: auto;
+}
+
+.pc-none {
+  display: none;
+}
+
+.sp-block {
+  display: none;
+}
+@media screen and (max-width: 568px) {
+  .sp-block {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .sp-none {
+    display: none;
+  }
+}
+
+.sp-title {
+  display: block;
+  margin: 0;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: green;
+}
+
+@media screen and (max-width: 568px) {
+  #hpb-wrapper, #hpb-footer {
+    width: 96.5%;
+    margin: auto;
+  }
+}
+
+#features ul {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 0;
+  list-style: none;
+}
+@media screen and (max-width: 568px) {
+  #features ul {
+    display: block;
+  }
+}
+#features ul li {
+  width: 32%;
+}
+@media screen and (max-width: 568px) {
+  #features ul li {
+    width: 100%;
+  }
+}
+#features ul li .title {
+  text-align: center;
+  color: #cc0000;
+  font-size: 200%;
+  font-weight: bold;
+  margin-bottom: 15px !important;
+}
+#features ul li .txt p {
+  font-size: 18px;
+}
+
+.to-teacher img {
+  max-width: 490px;
+}
+.to-teacher a:link, .to-teacher a:visited {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 568px) {
+  #hpb-main {
+    margin: 20px auto 0;
+  }
+}/*# sourceMappingURL=main_1Ad_2c.css.map */
