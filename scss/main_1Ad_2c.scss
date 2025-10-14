@@ -452,9 +452,27 @@ input.s {
 }
 
 // 2025/10 コンパス追加（レスポンシブ対応）
+// 各コーナーのタイトル
+.corner-title-pc {
+    margin: 0x auto 15px;
+    padding: 15px 0 0;
+}
+.corner-title-sp {
+    p {
+    margin: 15px auto!important;
+    background: cadetblue;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    padding: 8px 0 3px !important;
+    text-align: center;
+    }
+
+}
 .header-width {
     @media screen and (max-width: 568px) {
-        width: 100vw!important;
+        width: 100%!important;
     }
 }
 #hpb-header {
@@ -551,6 +569,11 @@ input.s {
     color: green;
 }
 
+
+.maxWidth-1000 {
+    max-width: 1000px;
+}
+
 #hpb-wrapper,#hpb-footer {
     @media screen and (max-width: 568px) {
         width: 96.5%;
@@ -558,7 +581,7 @@ input.s {
     }
 }
 
-#features {
+.pcTable-to-spUl {
     ul {
         display: flex;
         justify-content: space-between;
@@ -602,4 +625,44 @@ input.s {
     @media screen and (max-width: 568px) {
         margin: 20px auto 0;
     } 
+}
+
+// よくある質問
+.FAQ-wrap {
+    display: flex;
+    justify-content: space-between;
+    @media screen and (max-width: 568px) {
+        display: block;
+    } 
+    a {
+        @media screen and (max-width: 568px) {
+            display: block;
+        } 
+    }
+    img {
+        max-width: 314px;
+        @media screen and (max-width: 568px) {
+            margin: 0 0 15px;
+        } 
+    }
+}
+
+// 第一日本接骨師会
+#daiichi {
+    padding: 0 0 30px;
+    .corner-title-sp {
+        width: 95%;
+        margin: auto;
+        padding-top: 15px;
+        p {
+        color: #259685!important;
+        background-color: #fff;        
+        }
+    }
+    .txt p,p.title {
+        color: #fff!important;
+    }
+}
+.daiichi-sp {
+    background-color: #259685;
 }

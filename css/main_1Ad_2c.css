@@ -460,9 +460,25 @@ input.s {
     color: #fff;
   }
 }
+.corner-title-pc {
+  margin: 0x auto 15px;
+  padding: 15px 0 0;
+}
+
+.corner-title-sp p {
+  margin: 15px auto !important;
+  background: cadetblue;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  padding: 8px 0 3px !important;
+  text-align: center;
+}
+
 @media screen and (max-width: 568px) {
   .header-width {
-    width: 100vw !important;
+    width: 100% !important;
   }
 }
 
@@ -544,6 +560,10 @@ input.s {
   color: green;
 }
 
+.maxWidth-1000 {
+  max-width: 1000px;
+}
+
 @media screen and (max-width: 568px) {
   #hpb-wrapper, #hpb-footer {
     width: 96.5%;
@@ -551,33 +571,33 @@ input.s {
   }
 }
 
-#features ul {
+.pcTable-to-spUl ul {
   display: flex;
   justify-content: space-between;
   padding-left: 0;
   list-style: none;
 }
 @media screen and (max-width: 568px) {
-  #features ul {
+  .pcTable-to-spUl ul {
     display: block;
   }
 }
-#features ul li {
+.pcTable-to-spUl ul li {
   width: 32%;
 }
 @media screen and (max-width: 568px) {
-  #features ul li {
+  .pcTable-to-spUl ul li {
     width: 100%;
   }
 }
-#features ul li .title {
+.pcTable-to-spUl ul li .title {
   text-align: center;
   color: #cc0000;
   font-size: 200%;
   font-weight: bold;
   margin-bottom: 15px !important;
 }
-#features ul li .txt p {
+.pcTable-to-spUl ul li .txt p {
   font-size: 18px;
 }
 
@@ -593,4 +613,47 @@ input.s {
   #hpb-main {
     margin: 20px auto 0;
   }
+}
+
+.FAQ-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 568px) {
+  .FAQ-wrap {
+    display: block;
+  }
+}
+@media screen and (max-width: 568px) {
+  .FAQ-wrap a {
+    display: block;
+  }
+}
+.FAQ-wrap img {
+  max-width: 314px;
+}
+@media screen and (max-width: 568px) {
+  .FAQ-wrap img {
+    margin: 0 0 15px;
+  }
+}
+
+#daiichi {
+  padding: 0 0 30px;
+}
+#daiichi .corner-title-sp {
+  width: 95%;
+  margin: auto;
+  padding-top: 15px;
+}
+#daiichi .corner-title-sp p {
+  color: #259685 !important;
+  background-color: #fff;
+}
+#daiichi .txt p, #daiichi p.title {
+  color: #fff !important;
+}
+
+.daiichi-sp {
+  background-color: #259685;
 }/*# sourceMappingURL=main_1Ad_2c.css.map */
