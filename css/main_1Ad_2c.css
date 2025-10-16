@@ -461,11 +461,12 @@ input.s {
 }
 .sp-container {
   width: 100%;
+  max-width: 1000px;
+  margin: auto;
 }
 
 .corner-title-pc {
   margin: 0px auto 15px;
-  padding: 15px 0 0;
 }
 
 .corner-title-sp p {
@@ -681,6 +682,15 @@ input.s {
   background-color: #67a0ca;
 }
 
+.gaiyou-wrap {
+  display: flex;
+}
+@media screen and (max-width: 548px) {
+  .gaiyou-wrap {
+    display: block;
+  }
+}
+
 #hpb-header02 {
   width: 100% !important;
 }
@@ -764,7 +774,6 @@ input.s {
 .cost-table-sp table {
   width: 100%;
   border-collapse: collapse;
-  border: 1px solid #ddd;
 }
 @media screen and (max-width: 548px) {
   .cost-table-sp table {

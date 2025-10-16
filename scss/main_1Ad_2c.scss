@@ -467,11 +467,12 @@ $breakpoints: (
 // 2025/10 コンパス追加（レスポンシブ対応）
 .sp-container {
     width: 100%;
+    max-width: 1000px;
+    margin: auto;
 }
 // 各コーナーのタイトル\
 .corner-title-pc {
     margin: 0px auto 15px;
-    padding: 15px 0 0;
 }
 .corner-title-sp {
     p {
@@ -704,6 +705,12 @@ $breakpoints: (
 }
 
 // 第一日本接骨師会・第一日本鍼灸マッサージ師会　概要
+.gaiyou-wrap {
+    display: flex;
+    @include mq('sp') {
+        display: block;
+    }
+}
 #hpb-header02 {
     width: 100%!important;
 }
@@ -781,7 +788,6 @@ $breakpoints: (
 table {
     width: 100%;
     border-collapse: collapse;
-    border: 1px solid #ddd;
     @include mq('sp') {
         margin: 0!important;
     }
