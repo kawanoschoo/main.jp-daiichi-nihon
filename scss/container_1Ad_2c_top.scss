@@ -1,0 +1,314 @@
+@charset "UTF-8";
+
+/* ボディリセット */
+body {
+margin: 0;
+padding: 0;
+text-align: center;
+font-size: 75%;
+font-family: 'メイリオ', Meiryo, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'ＭＳ Ｐゴシック', 'Osaka', sans-serif;
+color: #666666; // 文字色
+min-width: 900px;
+float: none;
+}
+
+.float-a {
+@extend body;
+float: left;
+}
+
+/* Safari用ハック（フォントサイズ補正） */
+/*\*/
+html:first-child body {
+font-size: 70%;
+}
+/* end */
+
+img {
+border: 0;
+}
+
+/*--------------------------------------------------------
+レイアウト設定
+--------------------------------------------------------*/
+#hpb-container {
+background-position: bottom left;
+background-repeat: repeat-x;
+position: relative;
+}
+
+#hpb-header_right {
+width: 350px;
+margin: 0 auto;
+height: 94px;
+}
+
+#hpb-header01 {
+width: 300px;
+height: 250px;
+float: left;
+padding-right: 50px;
+}
+
+#hpb-header02 {
+width: 650px;
+height: 250px;
+float: right;
+clear: right;
+}
+
+#hpb-inner {
+width: 1000px;
+margin: 0 auto;
+position: relative;
+clear: both;
+}
+
+.hpb-layoutset-02 {
+#hpb-wrapper {
+    width: 650px;
+    padding-top: 53px;
+    float: left;
+}
+}
+
+.hpb-layoutset-01 {
+#hpb-title {
+    height: 260px;
+    margin: 0;
+    padding: 0;
+}
+}
+
+#hpb-main {
+width: 600px;
+float: left;
+text-align: left;
+
+.hpb-layoutset-01 & {
+    padding-top: 20px;
+}
+}
+
+#hpb-aside {
+width: 360px;
+float: right;
+padding-bottom: 50px;
+
+.hpb-layoutset-02 & {
+    margin-top: 39px;
+}
+}
+
+#hpb-footer {
+width: 1000px;
+height: 128px;
+margin: 0 auto;
+clear: both;
+padding-top: 50px;
+}
+
+.hpb-layoutset-01 {
+#hpb-nav {
+    width: 900px;
+    height: 38px;
+    overflow: hidden;
+    position: absolute;
+    top: 220px;
+    left: 0;
+    border-left: 1px solid #cccccc;
+}
+}
+
+.hpb-layoutset-02 {
+#hpb-nav {
+    width: 900px;
+    height: 38px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-left: 1px solid #cccccc;
+}
+}
+
+/*--------------------------------------------------------
+デザイン設定
+--------------------------------------------------------*/
+
+/* 背景設定 */
+.hpb-layoutset-01 {
+background: url(../images/bg_1Ad_01_01.png) repeat-x top left;
+}
+
+.hpb-layoutset-02 {
+background: url(../images/bg_1Ad_01_02.png) repeat-x top left;
+}
+
+/* コンテンツ部分 */
+
+/* ナビゲーション */
+#hpb-nav {
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: left;
+
+    &::after {
+    content: "";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    }
+}
+
+li {
+    float: left;
+    display: inline;
+    font-size: 13px;
+    line-height: 38px;
+    height: 38px;
+    overflow: hidden;
+    border-right: 1px solid #cccccc;
+
+    a {
+    display: block;
+    height: 37px;
+    overflow: hidden;
+    padding: 0 20px 0 27px;
+    background: url(../images/mainmenu_1Ad_01.png) no-repeat top left;
+
+    &:hover,
+    &:active {
+        background: url(../images/mainmenu_1Ad_01_on.png) repeat-x left top;
+    }
+    }
+
+    span.en {
+    display: none;
+    }
+}
+}
+
+/*=======================================================
+レスポンシブ設定
+=======================================================*/
+@media screen and (max-width: 568px) {
+body {
+    min-width: 100%;
+}
+
+#hpb-container {
+    background: none;
+}
+
+#hpb-header {
+    width: 100%;
+    height: auto;
+    padding-bottom: 10px;
+}
+
+#hpb-inner {
+    width: 100%;
+}
+
+.hpb-layoutset-02 {
+    #hpb-wrapper {
+    width: 100%;
+    padding-top: 0;
+    float: none;
+    }
+}
+
+.hpb-layoutset-01 {
+    #hpb-title {
+    height: auto;
+    }
+}
+
+#hpb-main {
+    width: 96%;
+    float: none;
+    margin: 0 auto;
+    padding-bottom: 20px;
+
+    .hpb-layoutset-01 & {
+    padding-top: 0;
+    }
+
+    .hpb-layoutset-02 & {
+    padding-top: 10px;
+    }
+}
+
+#hpb-aside {
+    width: 96%;
+    float: none;
+    margin: 0 auto;
+    padding-bottom: 20px;
+
+    .hpb-layoutset-02 & {
+    margin-top: 0;
+    }
+}
+
+#hpb-footer {
+    width: 100%;
+    height: auto;
+    padding-top: 0;
+    border-top: 1px solid #3b7901;
+}
+
+.hpb-layoutset-01,
+.hpb-layoutset-02 {
+    #hpb-nav {
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 0;
+    left: 0;
+    border: {
+        left: 0;
+        top: 1px solid #3c7c00;
+        bottom: 1px solid #cccccc;
+    }
+    }
+}
+
+/* デザイン設定 */
+.hpb-layoutset-01,
+.hpb-layoutset-02 {
+    background: none;
+}
+
+#hpb-nav {
+    ul {
+    display: none;
+
+    &.toggled-on {
+        display: block;
+    }
+    }
+
+    li {
+    float: none;
+    display: block;
+    line-height: 1.4;
+    height: auto;
+    border-right: 0;
+    border-top: 1px solid #cccccc;
+
+    a {
+        display: block;
+        height: auto;
+        padding: 10px;
+        background: none;
+
+        &:hover {
+        background-color: #6eae30;
+        }
+    }
+    }
+}
+}

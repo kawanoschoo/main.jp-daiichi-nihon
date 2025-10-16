@@ -309,7 +309,6 @@ h5 {
 
 /* テーブル設定 */
 table {
-    margin: 2px;
     border-collapse: collapse;
     border: none;
     border-color: #417173;
@@ -442,7 +441,20 @@ input.s {
 /*--------------------------------------------------------
   スマートフォン対応（レスポンシブ設定）
 --------------------------------------------------------*/
-@media screen and (max-width: 568px) {
+$breakpoints: (
+    'tb': 'screen and (max-width: 1000px)',
+    'sm': 'screen and (max-width: 800px)',
+    'sp': 'screen and (max-width: 548px)'
+
+) !default;
+
+@mixin mq($breakpoint: md) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}
+
+@include mq('sp') {
     /* 各種レイアウト調整 */
     #hpb-headerMain { height: auto; }
     #hpb-headerLogo, #hpb-headerExtra1 { width: 98%; float: none; margin: 0 auto; }
@@ -451,10 +463,14 @@ input.s {
     .hpb-layoutset-02 h2 { width: 100%; background: #4da102; color: #fff; }
 }
 
+
 // 2025/10 コンパス追加（レスポンシブ対応）
-// 各コーナーのタイトル
+.sp-container {
+    width: 100%;
+}
+// 各コーナーのタイトル\
 .corner-title-pc {
-    margin: 0x auto 15px;
+    margin: 0px auto 15px;
     padding: 15px 0 0;
 }
 .corner-title-sp {
@@ -462,16 +478,17 @@ input.s {
     margin: 15px auto!important;
     background: cadetblue;
     color: #fff;
+    font-family: none;
     font-size: 1.2rem;
-    font-weight: 400;
+    font-weight: 600;
     letter-spacing: 0.1rem;
-    padding: 8px 0 3px !important;
+    line-height: 2;
     text-align: center;
     }
 
 }
 .header-width {
-    @media screen and (max-width: 568px) {
+    @include mq('sp') {
         width: 100%!important;
     }
 }
@@ -481,13 +498,13 @@ input.s {
 
 // TOP画像 スマホ PC
 .hpb-photomotion {
-    @media screen and (max-width: 568px) {
+    @include mq('sp') {
         padding-top: 80px!important;
     }
 }
 // TOP画像 スマホ
 #hpb-slideshow1 {
-    @media screen and (max-width: 568px) {
+    @include mq('sp') {
         display: none!important;
     }
 }
@@ -504,7 +521,7 @@ input.s {
             a {
                 img {
                     
-                    @media screen and (max-width: 568px) {
+                    @include mq('sp') {
                         width: 90%;
                         display: block;
                     }
@@ -515,7 +532,7 @@ input.s {
     }
     // お問い合わせ
     .hpb-header-inner-block2 {
-        @media screen and (max-width: 568px) {
+        @include mq('sp') {
             display: flex;
             align-items: center;
             margin-top: 30px;
@@ -524,7 +541,7 @@ input.s {
             &.tel {
                 img {
                     width: 250px;
-                    @media screen and (max-width: 568px) {
+                    @include mq('sp') {
                         width: 70%;
                     } 
                 }
@@ -551,12 +568,12 @@ input.s {
 }
 .sp-block {
     display: none;
-    @media screen and (max-width: 568px) {
+    @include mq('sp') {
         display: block;
     }
 }
 .sp-none {
-    @media screen and (max-width: 568px) {
+    @include mq('sp') {
         display: none;
     }
 }
@@ -574,8 +591,12 @@ input.s {
     max-width: 1000px;
 }
 
-#hpb-wrapper,#hpb-footer {
-    @media screen and (max-width: 568px) {
+.maxWidth-1200 {
+    max-width: 1200px;
+}
+
+.sp-container {
+    @include mq('sp') {
         width: 96.5%;
         margin: auto;
     }
@@ -587,12 +608,12 @@ input.s {
         justify-content: space-between;
         padding-left: 0;
         list-style: none;
-        @media screen and (max-width: 568px) {
+        @include mq('sp') {
             display: block;
         }        
         li {
             width: 32%;
-            @media screen and (max-width: 568px) {
+            @include mq('sp') {
                 width: 100%;
             }          
             .title {
@@ -622,7 +643,7 @@ input.s {
 }
 
 #hpb-main {
-    @media screen and (max-width: 568px) {
+    @include mq('sp') {
         margin: 20px auto 0;
     } 
 }
@@ -631,32 +652,42 @@ input.s {
 .FAQ-wrap {
     display: flex;
     justify-content: space-between;
-    @media screen and (max-width: 568px) {
+    @include mq('sp') {
         display: block;
     } 
     a {
-        @media screen and (max-width: 568px) {
+        @include mq('sp') {
             display: block;
         } 
     }
     img {
         max-width: 314px;
-        @media screen and (max-width: 568px) {
+        @include mq('sp') {
             margin: 0 0 15px;
         } 
     }
 }
 
 // 第一日本接骨師会
-#daiichi {
+#hpb-template-01-01d-01 {
+    @include mq('sp') {
+        background-image: none!important;
+    } 
+}
+#daiichi,#daiichi-shinkyu {
     padding: 0 0 30px;
     .corner-title-sp {
-        width: 95%;
+        width: 100%;
         margin: auto;
         padding-top: 15px;
         p {
-        color: #259685!important;
-        background-color: #fff;        
+            background-color: #fff;
+            &.daiichi-p {
+                color: #259685!important;
+            }
+            &.daiichi-shunkyu-p {
+                color: #67a0ca!important;
+            }   
         }
     }
     .txt p,p.title {
@@ -665,4 +696,167 @@ input.s {
 }
 .daiichi-sp {
     background-color: #259685;
+}
+
+// 第一日本鍼灸マッサージ師会
+.daiichi-shinkyu-sp {
+    background-color: #67a0ca;
+}
+
+// 第一日本接骨師会・第一日本鍼灸マッサージ師会　概要
+#hpb-header02 {
+    width: 100%!important;
+}
+.gaiyou-table {
+    margin: 0!important;
+}
+
+
+// 入会のご案内
+.guidance-wrap {
+    margin: 0 auto 20px;
+    a {
+        color: #fff;
+        @include mq('sp') {
+            display: block;
+        } 
+        img {
+            max-width: 300px;
+        }
+    }
+}
+
+// 入会の流れ
+.flow-wrap {
+    tr {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include mq('sp') {
+            display: block;
+        }
+        &.border-left {
+            border-left: 25px solid #f4f5f5;
+            @include mq('sp') {
+                border-left: none;
+            }
+        }
+        &.arrow {
+            margin: 10px 0;
+        }
+        td {
+            display: block;
+            &:first-child {
+                text-align: center;
+                padding: 0!important;
+            }
+            &:last-child {
+                padding: 4% 7.5%;
+            }
+            @include mq('sp') {
+                width: 80%!important;
+                margin: auto;
+            }
+            img {
+                max-width: 200px;
+            }
+            p {
+                margin: 0!important;
+            }
+        }
+    }
+    @include mq('sp') {
+        margin: 0!important;
+    }
+}
+
+.cost-table-sp {
+    width: 100%;
+    margin: 2rem auto;
+    h2 {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+    @include mq('sp') {
+        margin: 0!important;
+    }
+    th, td {
+    border: 1px solid #ddd;
+    padding: 0.8rem;
+    text-align: center;
+    }
+
+    thead {
+    background: #f4f8fa;
+    th {
+        font-weight: 600;
+        font-size: 1rem;
+    }
+    }
+
+    tbody th {
+    background: #f9f9f9;
+    text-align: left;
+    width: 30%;
+    }
+}
+
+// ▼ スマホ対応（768px以下）
+@include mq('sp'){
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+    display: block;
+    }
+
+    thead {
+    display: none;
+    }
+
+    tbody tr {
+    margin-bottom: 1.5rem;
+    border: 1px solid #ddd;
+    overflow: hidden;
+    }
+
+    tbody th {
+        width: 100%!important;
+    background: #f4f8fa;
+    font-weight: 600;
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid #ddd;
+    }
+
+    tbody td {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0.8rem 1rem 0.8rem 70%;
+    text-align: left;
+    border: none;
+    border-bottom: 1px solid #eee;
+
+    &::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 1rem;
+        width: 60%;
+        font-weight: 600;
+        color: #333;
+        line-height: 1.2;
+    }
+
+    &:last-child {
+        border-bottom: none;
+    }
+    }
+}
 }
