@@ -1,15 +1,30 @@
 @charset "UTF-8";
+$breakpoints: (
+    'tb': 'screen and (max-width: 1000px)',
+    'sm': 'screen and (max-width: 800px)',
+    'sp': 'screen and (max-width: 548px)'
+
+) !default;
+
+@mixin mq($breakpoint: md) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}
 
 /* ボディリセット */
 body {
-margin: 0;
-padding: 0;
-text-align: center;
-font-size: 75%;
-font-family: 'メイリオ', Meiryo, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'ＭＳ Ｐゴシック', 'Osaka', sans-serif;
-color: #666666; // 文字色
-min-width: 900px;
-float: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 75%;
+    font-family: 'メイリオ', Meiryo, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'ＭＳ Ｐゴシック', 'Osaka', sans-serif;
+    color: #666666; // 文字色
+    min-width: 900px;
+    @include mq('tb') {
+        min-width: unset;
+    }
+    float: none;
 }
 
 .float-a {
@@ -62,6 +77,9 @@ width: 1000px;
 margin: 0 auto;
 position: relative;
 clear: both;
+    @include mq('tb') {
+        width: 100%;
+    }
 }
 
 .hpb-layoutset-02 {
@@ -81,31 +99,38 @@ clear: both;
 }
 
 #hpb-main {
-width: 600px;
-float: left;
-text-align: left;
-
-.hpb-layoutset-01 & {
-    padding-top: 20px;
-}
+    width: 100%;
+    max-width: 600px;
+    float: left;
+    text-align: left;
+    @include mq('tb') {
+        width: 100%;
+        float: unset;
+    }
+    .hpb-layoutset-01 & {
+        padding-top: 20px;
+    }
 }
 
 #hpb-aside {
-width: 360px;
-float: right;
-padding-bottom: 50px;
-
-.hpb-layoutset-02 & {
-    margin-top: 39px;
-}
+    width: 360px;
+    float: right;
+    padding-bottom: 50px;
+    @include mq('tb') {
+        float: unset;
+        margin: auto;
+    }
+    .hpb-layoutset-02 & {
+        margin-top: 39px;
+    }
 }
 
 #hpb-footer {
-width: 1000px;
-height: 128px;
-margin: 0 auto;
-clear: both;
-padding-top: 50px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    clear: both;
+    padding-top: 50px;
 }
 
 .hpb-layoutset-01 {
@@ -117,6 +142,9 @@ padding-top: 50px;
     top: 220px;
     left: 0;
     border-left: 1px solid #cccccc;
+    @include mq('tb') {
+        width: 100%;
+    }
 }
 }
 
@@ -129,6 +157,9 @@ padding-top: 50px;
     top: 0;
     left: 0;
     border-left: 1px solid #cccccc;
+    @include mq('tb') {
+        width: 100%;
+    }
 }
 }
 
@@ -233,6 +264,7 @@ body {
 
 #hpb-main {
     width: 96%;
+    max-width: 600px;
     float: none;
     margin: 0 auto;
     padding-bottom: 20px;

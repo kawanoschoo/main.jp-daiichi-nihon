@@ -10,6 +10,11 @@ body, .float-a {
   min-width: 900px;
   float: none;
 }
+@media screen and (max-width: 1000px) {
+  body, .float-a {
+    min-width: unset;
+  }
+}
 
 .float-a {
   float: left;
@@ -61,6 +66,11 @@ img {
   position: relative;
   clear: both;
 }
+@media screen and (max-width: 1000px) {
+  #hpb-inner {
+    width: 100%;
+  }
+}
 
 .hpb-layoutset-02 #hpb-wrapper {
   width: 650px;
@@ -75,9 +85,16 @@ img {
 }
 
 #hpb-main {
-  width: 600px;
+  width: 100%;
+  max-width: 600px;
   float: left;
   text-align: left;
+}
+@media screen and (max-width: 1000px) {
+  #hpb-main {
+    width: 100%;
+    float: unset;
+  }
 }
 .hpb-layoutset-01 #hpb-main {
   padding-top: 20px;
@@ -88,13 +105,19 @@ img {
   float: right;
   padding-bottom: 50px;
 }
+@media screen and (max-width: 1000px) {
+  #hpb-aside {
+    float: unset;
+    margin: auto;
+  }
+}
 .hpb-layoutset-02 #hpb-aside {
   margin-top: 39px;
 }
 
 #hpb-footer {
-  width: 1000px;
-  height: 128px;
+  width: 100%;
+  max-width: 1000px;
   margin: 0 auto;
   clear: both;
   padding-top: 50px;
@@ -109,6 +132,11 @@ img {
   left: 0;
   border-left: 1px solid #cccccc;
 }
+@media screen and (max-width: 1000px) {
+  .hpb-layoutset-01 #hpb-nav {
+    width: 100%;
+  }
+}
 
 .hpb-layoutset-02 #hpb-nav {
   width: 900px;
@@ -118,6 +146,11 @@ img {
   top: 0;
   left: 0;
   border-left: 1px solid #cccccc;
+}
+@media screen and (max-width: 1000px) {
+  .hpb-layoutset-02 #hpb-nav {
+    width: 100%;
+  }
 }
 
 /*--------------------------------------------------------
@@ -200,6 +233,7 @@ img {
   }
   #hpb-main {
     width: 96%;
+    max-width: 600px;
     float: none;
     margin: 0 auto;
     padding-bottom: 20px;

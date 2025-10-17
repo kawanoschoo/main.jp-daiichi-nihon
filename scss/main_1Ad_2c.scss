@@ -444,6 +444,7 @@ input.s {
 --------------------------------------------------------*/
 // メインカラー　#259685
 // ボーダーカラー　#10594e
+// max-width: 568px
 // 画面サイズ
 $breakpoints: (
     'tb': 'screen and (max-width: 1000px)',
@@ -458,7 +459,7 @@ $breakpoints: (
     }
 }
 
-@include mq('sp') {
+@include mq('tb') {
     /* 各種レイアウト調整 */
     #hpb-headerMain { height: auto; }
     #hpb-headerLogo, #hpb-headerExtra1 { width: 98%; float: none; margin: 0 auto; }
@@ -491,7 +492,7 @@ $breakpoints: (
 
 }
 .header-width {
-    @include mq('sp') {
+    @include mq('tb') {
         width: 100%!important;
     }
 }
@@ -501,13 +502,13 @@ $breakpoints: (
 
 // TOP画像 スマホ PC
 .hpb-photomotion {
-    @include mq('sp') {
+    @include mq('tb') {
         padding-top: 80px!important;
     }
 }
 // TOP画像 スマホ
 #hpb-slideshow1 {
-    @include mq('sp') {
+    @include mq('tb') {
         display: none!important;
     }
 }
@@ -524,7 +525,7 @@ $breakpoints: (
             a {
                 img {
                     
-                    @include mq('sp') {
+                    @include mq('tb') {
                         width: 90%;
                         display: block;
                     }
@@ -535,7 +536,7 @@ $breakpoints: (
     }
     // お問い合わせ
     .hpb-header-inner-block2 {
-        @include mq('sp') {
+        @include mq('tb') {
             display: flex;
             align-items: center;
         } 
@@ -543,7 +544,7 @@ $breakpoints: (
             &.tel {
                 img {
                     width: 250px;
-                    @include mq('sp') {
+                    @include mq('tb') {
                         width: 70%;
                     } 
                 }
@@ -567,12 +568,12 @@ $breakpoints: (
 }
 .sp-block {
     display: none;
-    @include mq('sp') {
+    @include mq('tb') {
         display: block;
     }
 }
 .sp-none {
-    @include mq('sp') {
+    @include mq('tb') {
         display: none;
     }
 }
@@ -593,29 +594,36 @@ $breakpoints: (
     max-width: 1200px;
 }
 
-.sp-container {
+.tb-sp-container {
     width: 100%;
     max-width: 1000px;
     margin: auto;
+    @include mq('tb') {
+        width: 100%;
+        max-width: 600px;
+        margin: auto;
+    }
     @include mq('sp') {
         width: 96.5%;
-        margin: auto;
     }
 }
 
 // index.html
+.features-table {
+    
+}
 .pcTable-to-spUl {
     ul {
         display: flex;
         justify-content: space-between;
         padding-left: 0;
         list-style: none;
-        @include mq('sp') {
+        @include mq('tb') {
             display: block;
         }        
         li {
             width: 32%;
-            @include mq('sp') {
+            @include mq('tb') {
                 width: 100%;
             }          
             .title {
@@ -645,7 +653,7 @@ $breakpoints: (
 }
 
 .chairman-img {
-    @include mq('sp') {
+    @include mq('tb') {
     width: 100%;
     height: auto;
     } 
@@ -654,7 +662,7 @@ $breakpoints: (
 
 
 #hpb-main {
-    @include mq('sp') {
+    @include mq('tb') {
         margin: 20px auto 0;
     } 
 }
@@ -665,18 +673,18 @@ $breakpoints: (
 .FAQ-wrap {
     display: flex;
     justify-content: space-between;
-    @include mq('sp') {
+    @include mq('tb') {
         display: block;
         margin: 30px auto 10px;
     } 
     a {
-        @include mq('sp') {
+        @include mq('tb') {
             display: block;
         } 
     }
     img {
         max-width: 314px;
-        @include mq('sp') {
+        @include mq('tb') {
             margin: 0 0 15px;
         } 
     }
@@ -685,7 +693,7 @@ $breakpoints: (
 // sekkotsu.html
 // 第一日本接骨師会
 #hpb-template-01-01d-01 {
-    @include mq('sp') {
+    @include mq('tb') {
         background-image: none!important;
     } 
 }
@@ -722,7 +730,7 @@ $breakpoints: (
 // 第一日本接骨師会・第一日本鍼灸マッサージ師会　概要
 .gaiyou-wrap {
     display: flex;
-    @include mq('sp') {
+    @include mq('tb') {
         display: block;
     }
 }
@@ -734,13 +742,13 @@ $breakpoints: (
 }
 // 経営支援
 .management-support {
-    @include mq('sp') {
+    @include mq('tb') {
         margin-top: 50px;
     }
     .merit-wrap {
         img {
             max-width: 490px;
-            @include mq('sp') {
+            @include mq('tb') {
                 max-width: unset;
             }
         }
@@ -752,12 +760,12 @@ $breakpoints: (
 // 入会のご案内
 .guidance-wrap {
     margin: 0 auto 40px;
-    @include mq('sp') {
+    @include mq('tb') {
         margin: 40px auto;
     }
     a {
         color: #fff;
-        @include mq('sp') {
+        @include mq('tb') {
             display: block;
         } 
         img {
@@ -771,12 +779,12 @@ $breakpoints: (
         display: flex;
         align-items: center;
         justify-content: center;
-        @include mq('sp') {
+        @include mq('tb') {
             display: block;
         }
         &.border-left {
             border-left: 25px solid #f4f5f5;
-            @include mq('sp') {
+            @include mq('tb') {
                 border-left: none;
             }
         }
@@ -792,7 +800,7 @@ $breakpoints: (
             &:last-child {
                 padding: 4% 7.5%;
             }
-            @include mq('sp') {
+            @include mq('tb') {
                 width: 80%!important;
                 margin: auto;
             }
@@ -804,14 +812,14 @@ $breakpoints: (
             }
         }
     }
-    @include mq('sp') {
+    @include mq('tb') {
         margin: 0!important;
     }
 }
 // 費用について
 .about-costs {
     margin: 15px auto 0;
-    @include mq('sp') {
+    @include mq('tb') {
         margin: 50px auto 0;
     }
 }
@@ -829,7 +837,7 @@ $breakpoints: (
 table {
     width: 100%;
     border-collapse: collapse;
-    @include mq('sp') {
+    @include mq('tb') {
         margin: 0!important;
     }
     th, td {
@@ -854,7 +862,7 @@ table {
 }
 
 // ▼ スマホ対応（768px以下）
-@include mq('sp'){
+@include mq('tb'){
     table,
     thead,
     tbody,
