@@ -164,8 +164,29 @@ jQuery(function(){jQuery( '#hpb-slideshow1' ).camera({ fx: 'simpleFade', loader:
   </div>
 </div>
 
-<div class="hpb-photomotion-sp sp-block">
-  <img src="images/sp_top_2.png" border="0" width="100%" height="auto">
+<div class="fv-slider hpb-photomotion-sp sp-block">
+    <div class="fv-slide active">
+        <picture>
+            <!-- ブラウザ幅最大～541px -->
+            <source srcset="images/sp_top_1.png" media="(min-width: 1001px)">
+            <!-- ブラウザ幅1023～768pxまでsampleの画像が表示 ※中間の場合の表記-->
+            <!-- <source srcset="images/sample.png" media="(min-width: 768px)" type="image/png"> -->
+            <!-- ブラウザ幅540px～から最小幅 -->
+            <img src="images/sp_top_1.png" alt=>
+        </picture>
+    </div>
+    <div class="fv-slide">
+        <picture>
+            <source srcset="images/sp_top_2.png" media="(min-width: 1001px)">
+            <img src="images/sp_top_2.png" alt=>
+        </picture>
+    </div>
+    <div class="fv-slide">
+        <picture>
+            <source srcset="images/sp_top_3.png" media="(min-width: 1001px)">
+            <img src="images/sp_top_3.png" alt=>
+        </picture>
+    </div>
 </div>
 
 <div id="" class="tb-sp-container">
@@ -321,5 +342,19 @@ jQuery(function(){jQuery( '#hpb-slideshow1' ).camera({ fx: 'simpleFade', loader:
   </div>
     </div>
   </div>
+  <script>
+    let currentIndex = 0;
+
+    // スライド切り替え処理
+    function changeSlide() {
+      const slides = document.querySelectorAll(".fv-slide");
+      slides[currentIndex].classList.remove("active");
+      currentIndex = (currentIndex + 1) % slides.length;
+      slides[currentIndex].classList.add("active");
+    }
+
+    // 3秒ごとにスライドを切り替える
+    setInterval(changeSlide, 3000);
+  </script>
 </body>
 </html>
