@@ -823,7 +823,8 @@ $breakpoints: (
 }
 // 費用について
 .about-costs {
-    margin: 15px auto 0;
+    margin: 0 auto;
+    padding-top: 60px;
     @include mq('tb') {
         margin: 50px auto 0;
     }
