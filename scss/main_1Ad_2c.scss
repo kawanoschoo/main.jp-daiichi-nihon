@@ -737,6 +737,14 @@ $breakpoints: (
     @include mq('sp') {
         margin-top: 50px;
     }
+    .merit-wrap {
+        img {
+            max-width: 490px;
+            @include mq('sp') {
+                max-width: unset;
+            }
+        }
+    }
 }
 
 

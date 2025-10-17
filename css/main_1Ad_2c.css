@@ -716,6 +716,14 @@ input.s {
     margin-top: 50px;
   }
 }
+.management-support .merit-wrap img {
+  max-width: 490px;
+}
+@media screen and (max-width: 548px) {
+  .management-support .merit-wrap img {
+    max-width: unset;
+  }
+}
 
 .guidance-wrap {
   margin: 0 auto 40px;
