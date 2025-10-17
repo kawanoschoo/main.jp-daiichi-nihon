@@ -604,12 +604,6 @@ input.s {
     max-height: none;
   }
 }
-@media screen and (max-width: 548px) {
-  .fv-slider {
-    height: 40vh;
-    min-height: 360px;
-  }
-}
 .fv-slider .fv-slide {
   position: absolute;
   width: 100%;
