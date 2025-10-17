@@ -438,9 +438,12 @@ input.s {
     padding: 0 5px 0 15px;
 }
 
+// 2025/10 コンパス追加（レスポンシブ対応）
 /*--------------------------------------------------------
   スマートフォン対応（レスポンシブ設定）
 --------------------------------------------------------*/
+// メインカラー　#259685
+// 画面サイズ
 $breakpoints: (
     'tb': 'screen and (max-width: 1000px)',
     'sm': 'screen and (max-width: 800px)',
@@ -463,28 +466,26 @@ $breakpoints: (
     .hpb-layoutset-02 h2 { width: 100%; background: #4da102; color: #fff; }
 }
 
-
-// 2025/10 コンパス追加（レスポンシブ対応）
-.sp-container {
-    width: 100%;
-    max-width: 1000px;
-    margin: auto;
-}
-// 各コーナーのタイトル\
+// 各コーナーのタイトル
 .corner-title-pc {
     margin: 0px auto 15px;
 }
+
 .corner-title-sp {
     p {
-    margin: 15px auto!important;
-    background: cadetblue;
-    color: #fff;
-    font-family: none;
-    font-size: 1.2rem;
-    font-weight: 600;
-    letter-spacing: 0.1rem;
-    line-height: 2;
-    text-align: center;
+        margin: 15px auto !important;
+        padding: 7px 0!important;
+        color: #fff;
+        background-image: linear-gradient(to right, #259685 0%, #b8e1da 100%);
+        color: #fff;
+        font-family: none;
+        font-size: 1.2rem;
+        font-weight: 600;
+        letter-spacing: 0.1rem;
+        text-align: center;
+        &.gaiyou {
+            font-size: .8rem;
+        }
     }
 
 }
@@ -560,10 +561,7 @@ $breakpoints: (
     }
 }
 
-
-
-
-
+// スマホ・PC　表示/非表示設定
 .pc-none {
     display: none;
 }
@@ -587,22 +585,25 @@ $breakpoints: (
     color: green;
 }
 
-
+// 最大サイズ設定
 .maxWidth-1000 {
     max-width: 1000px;
 }
-
 .maxWidth-1200 {
     max-width: 1200px;
 }
 
 .sp-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
     @include mq('sp') {
         width: 96.5%;
         margin: auto;
     }
 }
 
+// index.html
 .pcTable-to-spUl {
     ul {
         display: flex;
@@ -643,18 +644,30 @@ $breakpoints: (
     }
 }
 
+.chairman-img {
+    @include mq('sp') {
+    width: 100%;
+    height: auto;
+    } 
+}
+
+
+
 #hpb-main {
     @include mq('sp') {
         margin: 20px auto 0;
     } 
 }
 
+
+// q_and_a.html
 // よくある質問
 .FAQ-wrap {
     display: flex;
     justify-content: space-between;
     @include mq('sp') {
         display: block;
+        margin: 30px auto 10px;
     } 
     a {
         @include mq('sp') {
@@ -669,6 +682,7 @@ $breakpoints: (
     }
 }
 
+// sekkotsu.html
 // 第一日本接骨師会
 #hpb-template-01-01d-01 {
     @include mq('sp') {
@@ -682,13 +696,16 @@ $breakpoints: (
         margin: auto;
         padding-top: 15px;
         p {
-            background-color: #fff;
             &.daiichi-p {
-                color: #259685!important;
+                color: #259685 !important;
+                background-color: #fff !important;
+                background-image: none;
             }
             &.daiichi-shunkyu-p {
                 color: #67a0ca!important;
-            }   
+                background-color: #fff !important;
+                background-image: none;
+            }
         }
     }
     .txt p,p.title {
@@ -698,12 +715,10 @@ $breakpoints: (
 .daiichi-sp {
     background-color: #259685;
 }
-
 // 第一日本鍼灸マッサージ師会
 .daiichi-shinkyu-sp {
     background-color: #67a0ca;
 }
-
 // 第一日本接骨師会・第一日本鍼灸マッサージ師会　概要
 .gaiyou-wrap {
     display: flex;
@@ -717,11 +732,21 @@ $breakpoints: (
 .gaiyou-table {
     margin: 0!important;
 }
+// 経営支援
+.management-support {
+    @include mq('sp') {
+        margin-top: 50px;
+    }
+}
 
 
+// join.html
 // 入会のご案内
 .guidance-wrap {
-    margin: 0 auto 20px;
+    margin: 0 auto 40px;
+    @include mq('sp') {
+        margin: 40px auto;
+    }
     a {
         color: #fff;
         @include mq('sp') {
@@ -732,7 +757,6 @@ $breakpoints: (
         }
     }
 }
-
 // 入会の流れ
 .flow-wrap {
     tr {
@@ -776,10 +800,19 @@ $breakpoints: (
         margin: 0!important;
     }
 }
-
+// 費用について
+.about-costs {
+    margin: 15px auto 0;
+    @include mq('sp') {
+        margin: 50px auto 0;
+    }
+}
+.cost-table {
+    margin: 0 auto 40px;
+}
 .cost-table-sp {
     width: 100%;
-    margin: 2rem auto;
+    margin: 10px auto 40px;
     h2 {
         font-size: 1.2rem;
         margin-bottom: 1rem;

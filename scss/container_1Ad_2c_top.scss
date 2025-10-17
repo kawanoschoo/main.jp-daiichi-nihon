@@ -244,6 +244,7 @@ body {
 
 #hpb-aside {
     width: 96%;
+    max-width: 300px;
     float: none;
     margin: 0 auto;
     padding-bottom: 20px;
@@ -257,7 +258,6 @@ body {
     width: 100%;
     height: auto;
     padding-top: 0;
-    border-top: 1px solid #3b7901;
 }
 
 .hpb-layoutset-01,

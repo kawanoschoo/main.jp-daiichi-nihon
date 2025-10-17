@@ -150,7 +150,12 @@ HpbImgPreload('HPB_ROLLOVER3', 'images/join_hiyo1.png', 'images/join_hiyo1mo.jpg
 <!-- inner end --><!-- footer -->
 <div class="sp-container">
 <div id="hpb-inner">
-  <img src="images/join_bunner1.png" border="0" style="border-top-width : 0px;border-left-width : 0px;border-right-width : 0px;border-bottom-width : 0px; margin-top : 50px; margin-bottom : 30px;" width="100%" height="auto">
+  <div class="corner-title-pc sp-none">
+    <img src="images/join_bunner1.png" border="0" style="border-top-width : 0px;border-left-width : 0px;border-right-width : 0px;border-bottom-width : 0px; margin-top : 50px; margin-bottom : 30px;" width="100%" height="auto">
+  </div>
+  <div class="corner-title-sp sp-block">
+    <p>入会のご案内</p>
+  </div>
   <div class="guidance-wrap">
     <a href="#join_label" id="HPB_ROLLOVER2" name="HPB_ROLLOVER2" onmouseout="HpbImgSwap('HPB_ROLLOVER2', 'images/join_nagare2.png');" onmouseover="HpbImgSwap('HPB_ROLLOVER2', 'images/join_nagare2mo.jpg');">
       <img src="images/join_nagare2.png" border="0" style="border-top-width : 0px;border-left-width : 0px;border-right-width : 0px;border-bottom-width : 0px;" width="100%" height="auto" name="HPB_ROLLOVER2">
@@ -235,179 +240,190 @@ HpbImgPreload('HPB_ROLLOVER3', 'images/join_hiyo1.png', 'images/join_hiyo1mo.jpg
     </tbody>
   </table>
 </div>
+<!-- 費用について -->
 <div id="hpb-inner" style="text-align : left; " align="left">
-  <a name="hiyou_label"><img src="images/join_hiyou_bunner1.png" border="0" style="border-top-width : 0px;border-left-width : 0px;border-right-width : 0px;border-bottom-width : 0px; margin-top : 50px;margin-bottom : 30px;" width="100%" height="auto"></a><br>
-  <font size="+2" style="font-size : 150%;">●入会前の費用</font>
-  <!-- 入会前の費用　PC -->
-  <table border="1" width="100%" height="297" class="cost-table sp-none">
-    <tbody>
-      <tr>
-        <td width="296" style="color : #666666;background-color : #d9e3e3;border-right-color : #cccccc;border-bottom-color : #cccccc;">&nbsp;</td>
-        <td align="center" width="178" style="color : #666666;background-color : #f4f5f5;text-align : center;"><font size="+1">&nbsp;第一日本接骨師会</font></td>
-        <td align="center" style="color : #666666;background-color : #f4f5f5;text-align : center;"><font size="+1">&nbsp;第一日本鍼灸マッサージ師会</font></td>
-        <td align="center" style="color : #666666;background-color : #f4f5f5;text-align : center;"><font size="+1">&nbsp;両会とも加入の場合</font></td>
-      </tr>
-      <tr>
-        <td style="color : #666666;background-color : #f4f5f5;border-right-color : #cccccc;border-bottom-color : #cccccc;" height="43">
-        <font size="+1">　　入　会　金</font>
-        </td>
-        <td style="text-align : center;" align="center" height="43"><font size="+1">&nbsp;0円</font></td>
-        <td style="text-align : center;" align="center" height="43"><font size="+1">&nbsp;0円</font></td>
-        <td style="text-align : center;" align="center" height="43"><font size="+1">&nbsp;0円</font></td>
-      </tr>
-      <tr>
-        <td style="color : #666666;background-color : #f4f5f5;" height="76">
-        <font size="+1">　　行政申請代行・<br>
-        　　印鑑作成等実費</font>
-        </td>
-        <td style="text-align : center;" align="center" height="76"><font size="+1">&nbsp;1万円</font></td>
-        <td style="text-align : center;" align="center" height="76"><font size="+1">&nbsp;1万円</font></td>
-        <td style="text-align : center;" align="center" height="76"><font size="+1">&nbsp;1万円</font></td>
-      </tr>
-      <tr>
-        <td style="color : #666666;background-color : #f4f5f5;" height="76">
-        <font size="+1">　　初期導入費<br>
-        　　（請求ソフト導入費含）</font>
-        </td>
-        <td style="text-align : center;" align="center" height="76"><font size="+1">&nbsp;0円</font></td>
-        <td style="text-align : center;" align="center" height="76"><font size="+1">&nbsp;0円</font></td>
-        <td style="text-align : center;" align="center" height="76"><font size="+1">&nbsp;0円</font></td>
-      </tr>
-    </tbody>
-  </table>
-  <!-- 入会前の費用　スマホ -->
-  <section class="cost-table-sp cost-table-before pc-none sp-block">
-    <table>
-      <thead>
-        <tr>
-          <th></th>
-          <th>第一日本接骨師会</th>
-          <th>第一日本鍼灸マッサージ師会</th>
-          <th>両会とも加入の場合</th>
-        </tr>
-      </thead>
+  <div class="about-costs">
+    <div class="corner-title-pc sp-none">
+      <a name="hiyou_label">
+        <img src="images/join_hiyou_bunner1.png" border="0" style="border-top-width : 0px;border-left-width : 0px;border-right-width : 0px;border-bottom-width : 0px; margin-top : 50px;margin-bottom : 30px;" width="100%" height="auto">
+      </a>
+    </div>
+    <div class="corner-title-sp sp-block">
+      <p>費用について</p>
+    </div>
+    <br>
+    <font size="+2" style="font-size : 150%;">●入会前の費用</font>
+    <!-- 入会前の費用　PC -->
+    <table border="1" width="100%" height="297" class="cost-table sp-none">
       <tbody>
         <tr>
-          <th>第一日本接骨師会</th>
-          <td data-label="入会金">0円</td>
-          <td data-label="行政申請代行・印鑑作成等実費">1万円</td>
-          <td data-label="初期導入費（請求ソフト導入費含）">0円</td>
+          <td width="296" style="color : #666666;background-color : #d9e3e3;border-right-color : #cccccc;border-bottom-color : #cccccc;">&nbsp;</td>
+          <td align="center" width="178" style="color : #666666;background-color : #f4f5f5;text-align : center;"><font size="+1">&nbsp;第一日本接骨師会</font></td>
+          <td align="center" style="color : #666666;background-color : #f4f5f5;text-align : center;"><font size="+1">&nbsp;第一日本鍼灸マッサージ師会</font></td>
+          <td align="center" style="color : #666666;background-color : #f4f5f5;text-align : center;"><font size="+1">&nbsp;両会とも加入の場合</font></td>
         </tr>
         <tr>
-          <th>第一日本鍼灸マッサージ師会</th>
-          <td data-label="入会金">0円</td>
-          <td data-label="行政申請代行・印鑑作成等実費">1万円</td>
-          <td data-label="初期導入費（請求ソフト導入費含）">0円</td>
+          <td style="color : #666666;background-color : #f4f5f5;border-right-color : #cccccc;border-bottom-color : #cccccc;" height="43">
+          <font size="+1">　　入　会　金</font>
+          </td>
+          <td style="text-align : center;" align="center" height="43"><font size="+1">&nbsp;0円</font></td>
+          <td style="text-align : center;" align="center" height="43"><font size="+1">&nbsp;0円</font></td>
+          <td style="text-align : center;" align="center" height="43"><font size="+1">&nbsp;0円</font></td>
         </tr>
         <tr>
-          <th>両会とも加入の場合</th>
-          <td data-label="入会金">0円</td>
-          <td data-label="行政申請代行・印鑑作成等実費">1万円</td>
-          <td data-label="初期導入費（請求ソフト導入費含）">0円</td>
+          <td style="color : #666666;background-color : #f4f5f5;" height="76">
+          <font size="+1">　　行政申請代行・<br>
+          　　印鑑作成等実費</font>
+          </td>
+          <td style="text-align : center;" align="center" height="76"><font size="+1">&nbsp;1万円</font></td>
+          <td style="text-align : center;" align="center" height="76"><font size="+1">&nbsp;1万円</font></td>
+          <td style="text-align : center;" align="center" height="76"><font size="+1">&nbsp;1万円</font></td>
+        </tr>
+        <tr>
+          <td style="color : #666666;background-color : #f4f5f5;" height="76">
+          <font size="+1">　　初期導入費<br>
+          　　（請求ソフト導入費含）</font>
+          </td>
+          <td style="text-align : center;" align="center" height="76"><font size="+1">&nbsp;0円</font></td>
+          <td style="text-align : center;" align="center" height="76"><font size="+1">&nbsp;0円</font></td>
+          <td style="text-align : center;" align="center" height="76"><font size="+1">&nbsp;0円</font></td>
         </tr>
       </tbody>
     </table>
-  </section>
+    <!-- 入会前の費用　スマホ -->
+    <section class="cost-table-sp cost-table-before pc-none sp-block">
+      <table>
+        <thead>
+          <tr>
+            <th></th>
+            <th>第一日本接骨師会</th>
+            <th>第一日本鍼灸マッサージ師会</th>
+            <th>両会とも加入の場合</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>第一日本接骨師会</th>
+            <td data-label="入会金">0円</td>
+            <td data-label="行政申請代行・印鑑作成等実費">1万円</td>
+            <td data-label="初期導入費（請求ソフト導入費含）">0円</td>
+          </tr>
+          <tr>
+            <th>第一日本鍼灸マッサージ師会</th>
+            <td data-label="入会金">0円</td>
+            <td data-label="行政申請代行・印鑑作成等実費">1万円</td>
+            <td data-label="初期導入費（請求ソフト導入費含）">0円</td>
+          </tr>
+          <tr>
+            <th>両会とも加入の場合</th>
+            <td data-label="入会金">0円</td>
+            <td data-label="行政申請代行・印鑑作成等実費">1万円</td>
+            <td data-label="初期導入費（請求ソフト導入費含）">0円</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
 
-  <font size="+2" style="font-size : 150%;">●入会後の費用</font><br>
-  <!-- 入会後の費用　PC -->
-  <table border="1" width="100%" height="404" class="cost-table sp-none">
-    <tbody>
-      <tr>
-        <td width="296" style="color : #666666;background-color : #d9e3e3;">&nbsp;</td>
-        <td align="center" width="178" style="color : #666666;background-color : #f4f5f5;text-align : center;"><font size="+1">&nbsp;第一日本接骨師会</font></td>
-        <td align="center" style="color : #666666;background-color : #f4f5f5;text-align : center;"><font size="+1">&nbsp;第一日本鍼灸マッサージ師会</font></td>
-        <td align="center" style="color : #666666;background-color : #f4f5f5;text-align : center;"><font size="+1">&nbsp;両会とも加入の場合</font></td>
-      </tr>
-      <tr>
-        <td style="color : #666666;background-color : #f4f5f5;" height="48">
-        <font size="+1">　　会　費</font>
-        </td>
-        <td style="text-align : center;" align="center" height="48"><font size="+1">1万円／月</font></td>
-        <td style="text-align : center;" align="center" height="48"><font size="+1">1万円／年</font></td>
-        <td style="text-align : center;" align="center" height="48"><font size="+1">鍼灸師会分の会費免除</font></td>
-      </tr>
-      <tr>
-        <td style="color : #666666;background-color : #f4f5f5;" height="103">
-        <font size="+1">　　会員サポート・<br>
-        　　システム管理費<br>
-        　　（請求ソフト使用料含）</font>
-        </td>
-        <td style="text-align : center;" align="center" height="103"><font size="+1">17,600円／月</font></td>
-        <td style="text-align : center;" align="center" height="103"><font size="+1">4,400円／月</font></td>
-        <td style="text-align : center;" align="center" height="103"><font size="+1">18,700円／月</font></td>
-      </tr>
-      <tr>
-        <td style="color : #666666;background-color : #f4f5f5;" height="63">
-        <font size="+1">　　申請手数料</font>
-        </td>
-        <td style="text-align : center;" align="center" height="63"><font size="+1">費用額の1.6％</font></td>
-        <td style="text-align : center;" align="center" height="63"><font size="+1">費用額の2.5％</font></td>
-        <td style="text-align : center;" align="center" height="63"><font size="+1">両会に準ずる</font></td>
-      </tr>
-      <tr>
-        <td style="color : #666666;background-color : #f4f5f5;" height="69">
-        <font size="+1">　　医療過誤・障害事故を含む<br>
-        　　総合賠償保険</font>
-        </td>
-        <td style="text-align : center;" align="center" height="69"><font size="+1">2,160円&nbsp;</font></td>
-        <td style="text-align : center;" align="center" height="69"><font size="+1">
-		&nbsp;2,270円</font></td>
-        <td style="text-align : center;" align="center" height="69"><font size="+1">3,270円&nbsp;</font></td>
-      </tr>
-    </tbody>
-  </table>
-  <!-- 入会後の費用　スマホ -->
-  <section class="cost-table-sp cost-table-after pc-none sp-block">
-    <table>
-      <thead>
-        <tr>
-          <th></th>
-          <th>第一日本接骨師会</th>
-          <th>第一日本鍼灸マッサージ師会</th>
-          <th>両会とも加入の場合</th>
-        </tr>
-      </thead>
+    <font size="+2" style="font-size : 150%;">●入会後の費用</font><br>
+    <!-- 入会後の費用　PC -->
+    <table border="1" width="100%" height="404" class="cost-table sp-none">
       <tbody>
         <tr>
-          <th>第一日本接骨師会</th>
-          <td data-label="会費">1万円／月	</td>
-          <td data-label="会員サポート・システム管理費（請求ソフト使用料含）">17,600円／月</td>
-          <td data-label="申請料">費用額の1.6％</td>
-          <td data-label="医療過誤・障害事故を含む総合賠償保険">2,160円</td>
+          <td width="296" style="color : #666666;background-color : #d9e3e3;">&nbsp;</td>
+          <td align="center" width="178" style="color : #666666;background-color : #f4f5f5;text-align : center;"><font size="+1">&nbsp;第一日本接骨師会</font></td>
+          <td align="center" style="color : #666666;background-color : #f4f5f5;text-align : center;"><font size="+1">&nbsp;第一日本鍼灸マッサージ師会</font></td>
+          <td align="center" style="color : #666666;background-color : #f4f5f5;text-align : center;"><font size="+1">&nbsp;両会とも加入の場合</font></td>
         </tr>
         <tr>
-          <th>第一日本鍼灸マッサージ師会</th>
-          <td data-label="会費">1万円／年</td>
-          <td data-label="会員サポート・システム管理費（請求ソフト使用料含）">4,400円／月</td>
-          <td data-label="申請料">費用額の2.5％</td>
-          <td data-label="医療過誤・障害事故を含む総合賠償保険">2,270円</td>
+          <td style="color : #666666;background-color : #f4f5f5;" height="48">
+          <font size="+1">　　会　費</font>
+          </td>
+          <td style="text-align : center;" align="center" height="48"><font size="+1">1万円／月</font></td>
+          <td style="text-align : center;" align="center" height="48"><font size="+1">1万円／年</font></td>
+          <td style="text-align : center;" align="center" height="48"><font size="+1">鍼灸師会分の会費免除</font></td>
         </tr>
         <tr>
-          <th>両会とも加入の場合</th>
-          <td data-label="会費">鍼灸師会分の会費免除</td>
-          <td data-label="会員サポート・システム管理費（請求ソフト使用料含）">18,700円／月</td>
-          <td data-label="申請料">両会に準ずる</td>
-          <td data-label="医療過誤・障害事故を含む総合賠償保険">3,270円</td>
+          <td style="color : #666666;background-color : #f4f5f5;" height="103">
+          <font size="+1">　　会員サポート・<br>
+          　　システム管理費<br>
+          　　（請求ソフト使用料含）</font>
+          </td>
+          <td style="text-align : center;" align="center" height="103"><font size="+1">17,600円／月</font></td>
+          <td style="text-align : center;" align="center" height="103"><font size="+1">4,400円／月</font></td>
+          <td style="text-align : center;" align="center" height="103"><font size="+1">18,700円／月</font></td>
+        </tr>
+        <tr>
+          <td style="color : #666666;background-color : #f4f5f5;" height="63">
+          <font size="+1">　　申請手数料</font>
+          </td>
+          <td style="text-align : center;" align="center" height="63"><font size="+1">費用額の1.6％</font></td>
+          <td style="text-align : center;" align="center" height="63"><font size="+1">費用額の2.5％</font></td>
+          <td style="text-align : center;" align="center" height="63"><font size="+1">両会に準ずる</font></td>
+        </tr>
+        <tr>
+          <td style="color : #666666;background-color : #f4f5f5;" height="69">
+          <font size="+1">　　医療過誤・障害事故を含む<br>
+          　　総合賠償保険</font>
+          </td>
+          <td style="text-align : center;" align="center" height="69"><font size="+1">2,160円&nbsp;</font></td>
+          <td style="text-align : center;" align="center" height="69"><font size="+1">
+      &nbsp;2,270円</font></td>
+          <td style="text-align : center;" align="center" height="69"><font size="+1">3,270円&nbsp;</font></td>
         </tr>
       </tbody>
     </table>
-  </section>
+    <!-- 入会後の費用　スマホ -->
+    <section class="cost-table-sp cost-table-after pc-none sp-block">
+      <table>
+        <thead>
+          <tr>
+            <th></th>
+            <th>第一日本接骨師会</th>
+            <th>第一日本鍼灸マッサージ師会</th>
+            <th>両会とも加入の場合</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>第一日本接骨師会</th>
+            <td data-label="会費">1万円／月	</td>
+            <td data-label="会員サポート・システム管理費（請求ソフト使用料含）">17,600円／月</td>
+            <td data-label="申請料">費用額の1.6％</td>
+            <td data-label="医療過誤・障害事故を含む総合賠償保険">2,160円</td>
+          </tr>
+          <tr>
+            <th>第一日本鍼灸マッサージ師会</th>
+            <td data-label="会費">1万円／年</td>
+            <td data-label="会員サポート・システム管理費（請求ソフト使用料含）">4,400円／月</td>
+            <td data-label="申請料">費用額の2.5％</td>
+            <td data-label="医療過誤・障害事故を含む総合賠償保険">2,270円</td>
+          </tr>
+          <tr>
+            <th>両会とも加入の場合</th>
+            <td data-label="会費">鍼灸師会分の会費免除</td>
+            <td data-label="会員サポート・システム管理費（請求ソフト使用料含）">18,700円／月</td>
+            <td data-label="申請料">両会に準ずる</td>
+            <td data-label="医療過誤・障害事故を含む総合賠償保険">3,270円</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </div>
 </div>
 <div id="hpb-footer">
-      <div>
-        <p style="text-align : center;" align="center"><a href="index.html">TOP</a> │ <a href="join.html">入会のご案内</a> │ <a href="gaiyou.html">会概要</a> │ <a href="sekkotsu.html">第一日本接骨師会</a> │ <a href="shinkyu.html">第一日本鍼灸マッサージ師会</a> │<a href="q_and_a.html">よくある質問</a>│<a href="semina.html">セミナー情報</a> │ <a href="inquiry.html">お問い合わせ</a> │ <a href="inquiry.html#privacy_label">プライバシーポリシー</a></p>
-        　　
-        <p style="text-align : center;" align="center"><b><font size="+2" style="font-size : 150%;">第一日本接骨師会／第一日本鍼灸マッサージ師会</font></b>
-　　<br>
-        〒467-0842　名古屋市瑞穂区妙音通4-27-1　ファーストステージ2F　TEL.052-858-2363　FAX.052-858-2383</p>
-        <br>
-        <br>
-      </div>
-    </div>
+  <div>
+    <a href="inquiry.html" id="HPB_ROLLOVER8" name="HPB_ROLLOVER8" onmouseout="HpbImgSwap('HPB_ROLLOVER8', 'images/inquiry_bunner.png');" onmouseover="HpbImgSwap('HPB_ROLLOVER8', 'images/inquiry_bunnermo.jpg');"><img src="images/inquiry_bunner.png" border="0" style="border-top-width : 0px;border-left-width : 0px;border-right-width : 0px;border-bottom-width : 0px; margin-bottom : 100px;" width="100%" height="auto" name="HPB_ROLLOVER8"></a>
+  </div>
+  <div>
+    <p style="text-align : center;" align="center"><a href="index.html">TOP</a> │ <a href="join.html">入会のご案内</a> │ <a href="gaiyou.html">会概要</a> │ <a href="sekkotsu.html">第一日本接骨師会</a> │ <a href="shinkyu.html">第一日本鍼灸マッサージ師会</a> │<a href="q_and_a.html">よくある質問</a>│<a href="semina.html">セミナー情報</a> │ <a href="inquiry.html">お問い合わせ</a> │ <a href="inquiry.html#privacy_label">プライバシーポリシー</a></p>
+    <p style="text-align : center;" align="center"><b><font size="+2" style="font-size : 150%;">第一日本接骨師会／第一日本鍼灸マッサージ師会</font></b>
+    <br>
+    〒467-0842　名古屋市瑞穂区妙音通4-27-1　ファーストステージ2F<br>TEL.052-858-2363　FAX.052-858-2383</p>
+    <br>
+    <br>
+  </div>
 </div>
-
-
+</div>
 </div>
 </body>
 </html>

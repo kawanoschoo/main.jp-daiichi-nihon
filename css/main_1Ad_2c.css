@@ -459,26 +459,24 @@ input.s {
     color: #fff;
   }
 }
-.sp-container {
-  width: 100%;
-  max-width: 1000px;
-  margin: auto;
-}
-
 .corner-title-pc {
   margin: 0px auto 15px;
 }
 
 .corner-title-sp p {
   margin: 15px auto !important;
-  background: cadetblue;
+  padding: 7px 0 !important;
+  color: #fff;
+  background-image: linear-gradient(to right, #259685 0%, #b8e1da 100%);
   color: #fff;
   font-family: none;
   font-size: 1.2rem;
   font-weight: 600;
   letter-spacing: 0.1rem;
-  line-height: 2;
   text-align: center;
+}
+.corner-title-sp p.gaiyou {
+  font-size: 0.8rem;
 }
 
 @media screen and (max-width: 548px) {
@@ -573,6 +571,11 @@ input.s {
   max-width: 1200px;
 }
 
+.sp-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+}
 @media screen and (max-width: 548px) {
   .sp-container {
     width: 96.5%;
@@ -619,6 +622,13 @@ input.s {
 }
 
 @media screen and (max-width: 548px) {
+  .chairman-img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 548px) {
   #hpb-main {
     margin: 20px auto 0;
   }
@@ -631,6 +641,7 @@ input.s {
 @media screen and (max-width: 548px) {
   .FAQ-wrap {
     display: block;
+    margin: 30px auto 10px;
   }
 }
 @media screen and (max-width: 548px) {
@@ -661,14 +672,15 @@ input.s {
   margin: auto;
   padding-top: 15px;
 }
-#daiichi .corner-title-sp p, #daiichi-shinkyu .corner-title-sp p {
-  background-color: #fff;
-}
 #daiichi .corner-title-sp p.daiichi-p, #daiichi-shinkyu .corner-title-sp p.daiichi-p {
   color: #259685 !important;
+  background-color: #fff !important;
+  background-image: none;
 }
 #daiichi .corner-title-sp p.daiichi-shunkyu-p, #daiichi-shinkyu .corner-title-sp p.daiichi-shunkyu-p {
   color: #67a0ca !important;
+  background-color: #fff !important;
+  background-image: none;
 }
 #daiichi .txt p, #daiichi p.title, #daiichi-shinkyu .txt p, #daiichi-shinkyu p.title {
   color: #fff !important;
@@ -699,8 +711,19 @@ input.s {
   margin: 0 !important;
 }
 
+@media screen and (max-width: 548px) {
+  .management-support {
+    margin-top: 50px;
+  }
+}
+
 .guidance-wrap {
-  margin: 0 auto 20px;
+  margin: 0 auto 40px;
+}
+@media screen and (max-width: 548px) {
+  .guidance-wrap {
+    margin: 40px auto;
+  }
 }
 .guidance-wrap a {
   color: #fff;
@@ -763,9 +786,22 @@ input.s {
   }
 }
 
+.about-costs {
+  margin: 15px auto 0;
+}
+@media screen and (max-width: 548px) {
+  .about-costs {
+    margin: 50px auto 0;
+  }
+}
+
+.cost-table {
+  margin: 0 auto 40px;
+}
+
 .cost-table-sp {
   width: 100%;
-  margin: 2rem auto;
+  margin: 10px auto 40px;
 }
 .cost-table-sp h2 {
   font-size: 1.2rem;
