@@ -840,84 +840,89 @@ $breakpoints: (
         margin-bottom: 1rem;
     }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-    @include mq('tb') {
-        margin: 0!important;
-    }
-    th, td {
-    border: 1px solid #ddd;
-    padding: 0.8rem;
-    text-align: center;
-    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        @include mq('tb') {
+            margin: 0!important;
+        }
+        th, td {
+        border: 1px solid #ddd;
+        padding: 0.8rem;
+        text-align: center;
+        }
 
-    thead {
-    background: #f4f8fa;
-    th {
-        font-weight: 600;
-        font-size: 1rem;
-    }
-    }
+        thead {
+        background: #f4f8fa;
+        th {
+            font-weight: 600;
+            font-size: 1rem;
+        }
+        }
 
-    tbody th {
-    background: #f9f9f9;
-    text-align: left;
-    width: 30%;
+        tbody th {
+        background: #f9f9f9;
+        text-align: left;
+        width: 30%;
+        }
     }
-}
+    // ▼ スマホ対応（768px以下）
+    @include mq('tb'){
+        table,
+        thead,
+        tbody,
+        th,
+        td,
+        tr {
+        display: block;
+        }
 
-// ▼ スマホ対応（768px以下）
-@include mq('tb'){
-    table,
-    thead,
-    tbody,
-    th,
-    td,
-    tr {
-    display: block;
-    }
+        thead {
+        display: none;
+        }
 
-    thead {
-    display: none;
-    }
+        tbody tr {
+        margin-bottom: 1.5rem;
+        border: 1px solid #ddd;
+        overflow: hidden;
+        }
 
-    tbody tr {
-    margin-bottom: 1.5rem;
-    border: 1px solid #ddd;
-    overflow: hidden;
-    }
+        tbody th {
+            width: 100%!important;
+            background: #f4f8fa;
+            font-weight: 600;
+            padding: 0.8rem 0 0.8rem 15px;
+            border-bottom: 1px solid #ddd;
+        }
 
-    tbody th {
-        width: 100%!important;
-    background: #f4f8fa;
-    font-weight: 600;
-    padding: 0.8rem 1rem;
-    border-bottom: 1px solid #ddd;
+        tbody td {
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding: 0.8rem 1rem 0.8rem 70%;
+            font-size: 13.5px;
+            text-align: left;
+            border: none;
+            border-bottom: 1px solid #eee;
+            &::before {
+                content: attr(data-label);
+                position: absolute;
+                left: 1rem;
+                width: 60%;
+                font-weight: 600;
+                color: #333;
+                line-height: 1.2;
+            }
+            &:last-child {
+                border-bottom: none;
+            }
+        }
     }
-
-    tbody td {
-    position: relative;
-    display: flex;
-    align-items: center;
-    padding: 0.8rem 1rem 0.8rem 70%;
-    text-align: left;
-    border: none;
-    border-bottom: 1px solid #eee;
-
-    &::before {
-        content: attr(data-label);
-        position: absolute;
-        left: 1rem;
-        width: 60%;
-        font-weight: 600;
-        color: #333;
-        line-height: 1.2;
+    @include mq('sp') {
+        tbody {
+            td {
+                font-size: 11.5px;
+            }
+        }
     }
-
-    &:last-child {
-        border-bottom: none;
-    }
-    }
-}
 }
