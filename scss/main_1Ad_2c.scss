@@ -854,16 +854,17 @@ $breakpoints: (
 
         thead {
         background: #f4f8fa;
-        th {
-            font-weight: 600;
-            font-size: 1rem;
-        }
+            th {
+                font-weight: 600;
+                font-size: 1rem;
+            }
         }
 
         tbody th {
-        background: #f9f9f9;
-        text-align: left;
-        width: 30%;
+            background: #f9f9f9;
+            text-align: left;
+            font-size: 14.5px;
+            width: 30%;
         }
     }
     // ▼ スマホ対応（768px以下）

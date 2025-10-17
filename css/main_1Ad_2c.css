@@ -849,6 +849,7 @@ input.s {
 .cost-table-sp table tbody th {
   background: #f9f9f9;
   text-align: left;
+  font-size: 14.5px;
   width: 30%;
 }
 @media screen and (max-width: 1000px) {
