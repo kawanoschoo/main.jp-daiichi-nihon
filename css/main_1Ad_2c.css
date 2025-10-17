@@ -588,6 +588,10 @@ input.s {
   }
 }
 
+.to-contact {
+  margin: 0 auto 80px;
+}
+
 .pcTable-to-spUl ul {
   display: flex;
   justify-content: space-between;
