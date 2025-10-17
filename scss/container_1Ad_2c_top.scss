@@ -203,10 +203,14 @@ body {
     background: none;
 }
 
+.hpb-container-sp {
+    padding-top: 90px!important;
+}
+
 #hpb-header {
     width: 100%;
     height: auto;
-    padding-bottom: 10px;
+    padding-top: 8px!important;
 }
 
 #hpb-inner {

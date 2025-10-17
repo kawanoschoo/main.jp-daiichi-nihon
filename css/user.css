@@ -1,77 +1,74 @@
-@charset "Shift_JIS";
+@charset "UTF-8";
 
 /*--------------------------------------------------------
-  ƒtƒ‹CSSƒvƒƒtƒFƒbƒVƒ‡ƒiƒ‹ƒeƒ“ƒvƒŒ[ƒg•”•iİ’è
+  å…±é€šCSSãƒ—ãƒ­ãƒ•ã‚¡ã‚¤ãƒ«ï¼ˆãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆå´è¨­å®šï¼‰
 --------------------------------------------------------*/
 
-.hpb-parts-cnt-style
-{
+.hpb-parts-cnt-style {
     border-color: #3C7C00;
 }
 
-.hpb-parts-hl-style
-{
+.hpb-parts-hl-style {
     border-color: #3C7C00;
 }
 
-.hpb-parts-cbox-style
-{
+.hpb-parts-cbox-style {
     border-color: #3C7C00;
 }
 
-.hpb-parts-hr-style
-{
+.hpb-parts-hr-style {
     border-color: #3C7C00;
 }
 
-.hpb-parts-pbox-style
-{
+.hpb-parts-pbox-style {
     background-color: #f4f4f4;
     border-color: #dddddd;
 }
-.hpb-parts-pbox-style h4
-{
+.hpb-parts-pbox-style h4 {
     padding: 0px !important;
 }
-.hpb-parts-pbox-style img
-{
+.hpb-parts-pbox-style img {
     background-color: #f4f4f4;
 }
 
-.hpb-parts-blist-style
-{
+.hpb-parts-blist-style {
     background-color: #f3f3f3;
     border-color: #3C7A01;
 }
-a.hpb-parts-blist-style:link
-{
+a.hpb-parts-blist-style:link {
     color: #666666;
 }
-a.hpb-parts-blist-style:visited
-{
+a.hpb-parts-blist-style:visited {
     color: #666666;
 }
-a.hpb-parts-blist-style:hover
-{
+a.hpb-parts-blist-style:hover {
     color: #3C7A01;
 }
-a.hpb-parts-blist-style:active
-{
+a.hpb-parts-blist-style:active {
     color: #3C7A01;
 }
 
 /*--------------------------------------------------------
-  ƒ†[ƒU[İ’èƒXƒ^ƒCƒ‹
+  ãƒŠãƒ“ã‚²ãƒ¼ã‚·ãƒ§ãƒ³è¨­å®šã‚¹ã‚¿ã‚¤ãƒ«
 --------------------------------------------------------*/
-/*‚Â‚¢‚Ä‚­‚éƒgƒbƒvƒ{ƒ^ƒ“*/
-.nav{
-	white-space: nowrap;
+/* å›ºå®šã—ã¦ã„ã‚‹ãƒˆãƒƒãƒ—ãƒœã‚¿ãƒ³ */
+.nav {
+    white-space: nowrap;
     position: fixed;
     width: 100%;
+    height: 100px;
     z-index: 10000;
-	/*background-image : url(../images/hedderimage_00.png);ƒ{ƒ^ƒ“•”•ª‚ÌŒJ‚è•Ô‚µ”wŒi‰æ‘œ*/
-	/*background-repeat: repeat-x;/*ƒ{ƒ^ƒ“•”•ª‚ÌŒJ‚è•Ô‚µ”wŒi‰æ‘œino-repeat‚É‚·‚é‚ÆƒZƒ“ƒ^[”z’uj*/
-	background-position: left top;/*”wŒiƒZƒ“ƒ^[”z’u‚Ì‚Æ‚«‚Í‚±‚Ìs‚Ííœ*/
-        opacity: 1.0;
-background-image : url(../images/hedderimage_00.png);
+    background-color: #259685;
+    border-top: 20px solid #10594e;
+    /* background-image: url(../images/hedderimage_00.png); ãƒœã‚¿ãƒ³ä¸Šéƒ¨ã®èƒŒæ™¯ç”»åƒ */
+    /* background-repeat: repeat-x; /* èƒŒæ™¯ç”»åƒã‚’æ¨ªæ–¹å‘ã«ç¹°ã‚Šè¿”ã™ã€‚no-repeatã«ã™ã‚‹ã¨ä¸­å¤®é…ç½® */
+    background-position: left top; /* èƒŒæ™¯ã‚’å·¦ä¸Šã«é…ç½® */
+    opacity: 1.0;
+    /* background-image: url(../images/hedderimage_00.png); */
+}
+
+@media screen and (max-width: 548px) {
+    .nav {
+        height: 70px;
+    }
 }

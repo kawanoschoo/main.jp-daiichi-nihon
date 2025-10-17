@@ -443,6 +443,7 @@ input.s {
   スマートフォン対応（レスポンシブ設定）
 --------------------------------------------------------*/
 // メインカラー　#259685
+// ボーダーカラー　#10594e
 // 画面サイズ
 $breakpoints: (
     'tb': 'screen and (max-width: 1000px)',
@@ -537,7 +538,6 @@ $breakpoints: (
         @include mq('sp') {
             display: flex;
             align-items: center;
-            margin-top: 30px;
         } 
         a {
             &.tel {
