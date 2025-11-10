@@ -447,7 +447,7 @@ input.s {
 // max-width: 568px
 // 画面サイズ
 $breakpoints: (
-    'tb': 'screen and (max-width: 1000px)',
+    'tb': 'screen and (max-width: 960px)',
     'sm': 'screen and (max-width: 800px)',
     'sp': 'screen and (max-width: 548px)'
 
@@ -509,12 +509,13 @@ $breakpoints: (
     justify-content: space-between;
     // ロゴ
     .hpb-header-inner-block1 {
+        width: 52%;
         #hpb-headerLogo {
             a {
                 img {
-                    
                     @include mq('tb') {
                         width: 90%;
+                        max-width: 330px;
                         display: block;
                     }
                 }
@@ -525,8 +526,8 @@ $breakpoints: (
     // お問い合わせ
     .hpb-header-inner-block2 {
         @include mq('tb') {
-            display: flex;
-            align-items: center;
+            // display: flex;
+            // align-items: center;
         } 
         a {
             &.tel {
@@ -593,6 +594,88 @@ $breakpoints: (
     }
     @include mq('sp') {
         width: 96.5%;
+    }
+}
+
+.footer-sp-nav {
+    background-color: #259685;
+    color: #fff;
+    .footer-sp-nav-inner {
+        width: 100%;
+        max-width: 600px;
+        margin: auto;
+        padding: 2.5% 0 70px 0;
+        ul {
+            display: grid;
+            grid-auto-flow: column;
+            grid-template-rows: repeat(5, auto);
+            li {
+                list-style: none;
+                text-align: left;
+                margin: 5px 0;
+                font-size: 13px;
+                &::before {
+                    content: "▶";
+                    margin-right: 3px;
+                }
+                a {
+                    color: #fff;
+                    text-decoration: none;
+                }
+            }
+        }
+        .address {
+            margin: 30px 0 10px;
+            p {
+                &:first-child {
+                    margin-bottom: 6px;
+                    font-size: 15px;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+    p {
+        margin-block-start: 0em;
+        margin-block-end: 0em;
+        text-align: center;
+    }
+}
+
+.fixedLink {
+    position: fixed;
+    display: none;
+    align-items: center;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: #2082bb;
+    color: #fff;
+    @include mq('tb') {
+        display: flex;
+    }
+    .fixedLink-inner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: fit-content;
+        margin: auto;
+        .tel,.mail {
+            display: block;
+        }
+        .tel {
+            width: 52.5%;
+            display: block;
+            margin-right: 10px;
+        }
+        .mail {
+            width: 30%;
+        }
+        img {
+            width: 100%;
+            height: auto;
+        }
     }
 }
 
@@ -964,4 +1047,260 @@ $breakpoints: (
             }
         }
     }
+}
+
+//*-*-*-*-*-*-*-*-*-  ハンバーガーメニュー  *-*-*-*-*-*-*-*-*-
+// PC時
+@media (min-width: 961px) {
+	.sp-nav {
+		display: none;
+	}
+	#hamburger {
+		display: none;
+	}
+}
+// 以下、ハンバーガーメニューの設定　
+@media (max-width: 960px) {
+	.pc-nav {
+		display: none;
+	}
+	.menu-btn {
+		position: fixed;
+		top: 35px;
+		right: 20px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		z-index: 10001;
+		@media (max-width: 960px) {
+			width: 70px;
+			height: 70px;
+			top: 27px;
+			right: 0px;
+		}
+		@include mq(sp) {
+            height: 50px;
+            width: 50px;
+            top: 22px;
+            right: 3px;
+		}
+	}
+	.menu-btn span,
+	.menu-btn span:before,
+	.menu-btn span:after {
+		content: '';
+		display: block;
+		height: 3px;
+		border-radius: 3px;
+		background-color: #10594e;
+		position: absolute;
+		@media (max-width: 960px) {
+			width: 35px;
+		}
+		@include mq(sp) {
+			width: 25px;
+		}
+	}
+	.menu-btn {
+		&::after {
+			content: "メニュー";
+			position: absolute;
+			top: 52px;
+			color: #10594e;
+			font-size: 10px;
+			font-weight: bold;
+			@include mq(sp) {
+				top: 38px;
+			}
+		}
+		span {
+			&::before {
+				@media (max-width: 960px) {
+					bottom: 10px;
+				}
+				@include mq(sp) {
+					bottom: 8px;
+				}
+			}
+			&::after {
+				@media (max-width: 960px) {
+					top: 10px;
+				}
+				@include mq(sp) {
+					top: 8px;
+				}
+			}
+		}
+	}
+	#menu-btn-check:checked ~ .menu-btn::after {
+		content: "とじる";
+	}
+	#menu-btn-check:checked ~ .menu-btn span {
+		background-color: rgba(255, 255, 255, 0);
+	}
+	#menu-btn-check:checked ~ .menu-btn span::before {
+		bottom: 0;
+		transform: rotate(45deg);
+	}
+	#menu-btn-check:checked ~ .menu-btn span::after {
+		top: 0;
+		transform: rotate(-45deg);
+	}
+	#menu-btn-check {
+		display: none;
+	}
+	.sp-nav {
+		height: 100%;
+		position: fixed;
+		top: 0;
+		left: 100%;
+		z-index: 10000;
+		transition: all 0.5s;
+		box-shadow: 0px 0px 3px 0px #ccc;
+        // padding-left: 15px;
+		@include mq(tb) {
+			width: 70%;
+			background-color: #fff;
+		}
+		@include mq(sp) {
+			width: 85%;
+            // padding-left: 10px;
+		}
+		h1 {
+			margin-top: 50px;
+            text-align: left;
+			@include mq(sp) {
+				margin-top: 5vh;
+			}
+			img {
+				width: 100%;
+				max-width: 300px;
+				margin: auto;
+				@include mq(sp) {
+					width: 80%;
+					height: auto;
+				}
+			}
+		}
+        nav {
+            padding-left: 15px;
+        }
+		ul {
+			padding: 30px 0 0;
+			@include mq(sp) {
+                padding: 25px 0px 0;
+			}
+			li {
+				margin-bottom: 10px;
+				border-bottom: solid 1px #d3d3d3;
+				list-style: none;
+				line-height: 1.5;
+				text-align: left;
+				&:last-child {
+					border-bottom: none;
+				}
+				a {
+					display: block;
+					width: 100%;
+					font-size: 15px;
+					font-weight: bold;
+					box-sizing: border-box;
+					color: #259685;
+					letter-spacing: .1rem;
+					text-decoration: none;
+					padding: 9px 15px 10px 0;
+					position: relative;
+					@include mq(sp) {
+						padding: 4px 10px 5px 0;
+					}
+				}
+			}
+		}
+	}
+	#menu-btn-check:checked ~ .sp-nav {
+        overflow-y: scroll;
+		@include mq(tb) {
+			left: 30%;
+		}
+		@include mq(sp) {
+			left: 15%;
+		}
+	}
+	.sp-nav-calendar {
+		@include mq(tb) {
+			margin-top: 5vh;
+		}
+		@include mq(sp) {
+			margin-top: 35px;
+		}
+		p {
+			color:#259685;
+			text-align: center;
+			@include mq(sp) {
+				font-size: 1.3rem;
+			}
+		}
+		.medical-calendar {
+			td,th {
+				vertical-align: middle;
+				@include mq(tb) {
+					text-align: center;
+				}
+				@include mq(sp) {
+					padding: 5px;
+					font-size: 1.2rem;
+				}
+			}
+			th {
+				&:first-of-type {
+					@include mq(sp) {
+						padding: 10px 15px;
+					}
+				}
+			}
+		}
+		.holiday {
+			background-color: #fff;
+			color: #484848;
+			border-radius: unset;
+			padding: 0;
+			font-size: 1.35rem;
+			@include mq(tb) {
+				padding: 5px 10px;
+			}
+			@include mq(sp) {
+				padding: 5px 14px;
+			}
+		}
+	}
+	.sp-nav-contact {
+        width: 98%;
+        max-width: 450px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 40px;
+        padding-left: 2%;
+        a {
+            display: block;
+            text-align: left;
+            &.mail-block {
+                width: 30%;
+            }
+            &.tel-block {
+                width: 60%;
+            }
+        }
+        img {
+            width: 100%;
+            // max-width: 270px;
+        }
+		p {
+			color: #333;
+			font-size: 1.4rem;
+			font-weight: bold;
+			text-align: center;
+			letter-spacing: .1rem;
+			
+		}
+	}
 }
