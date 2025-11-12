@@ -700,18 +700,13 @@ $breakpoints: (
 .fv-slider {
     position: relative;
     width: 100%;
-    height: 700px;
+    aspect-ratio: 4 / 5;
     overflow: hidden;
-    @include mq(tb) {
-        height: 75vh;
-        max-height: none;
-    }
     .fv-slide {
         position: absolute;
-        width: 100%;
-        height: 100%;
+        inset: 0;
         opacity: 0;
-        transition: opacity 1s ease-in-out;
+        transition: opacity 2s ease-in-out;
         &.active {
             opacity: 1;
         }
