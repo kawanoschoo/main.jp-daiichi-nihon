@@ -601,7 +601,7 @@ $breakpoints: (
     background-color: #259685;
     color: #fff;
     .footer-sp-nav-inner {
-        width: 100%;
+        width: 94.5%;
         max-width: 600px;
         margin: auto;
         padding: 2.5% 0 70px 0;
@@ -609,6 +609,7 @@ $breakpoints: (
             display: grid;
             grid-auto-flow: column;
             grid-template-rows: repeat(5, auto);
+            padding-left: 0;
             li {
                 list-style: none;
                 text-align: left;
@@ -786,6 +787,12 @@ $breakpoints: (
     @include mq('tb') {
         margin: 20px auto 0;
     } 
+}
+
+// 概要ページ
+.sp-iframe {
+    width: 100%;
+    margin: 15px auto 0;
 }
 
 

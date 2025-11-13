@@ -579,7 +579,7 @@ input.s {
   color: #fff;
 }
 .footer-sp-nav .footer-sp-nav-inner {
-  width: 100%;
+  width: 94.5%;
   max-width: 600px;
   margin: auto;
   padding: 2.5% 0 70px 0;
@@ -588,6 +588,7 @@ input.s {
   display: grid;
   grid-auto-flow: column;
   grid-template-rows: repeat(5, auto);
+  padding-left: 0;
 }
 .footer-sp-nav .footer-sp-nav-inner ul li {
   list-style: none;
@@ -761,6 +762,11 @@ input.s {
   #hpb-main {
     margin: 20px auto 0;
   }
+}
+
+.sp-iframe {
+  width: 100%;
+  margin: 15px auto 0;
 }
 
 .FAQ-wrap {
