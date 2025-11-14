@@ -1031,6 +1031,11 @@ input.s {
   }
 }
 
+#privacy_label {
+  padding-top: 100px;
+  margin-bottom: 60px;
+}
+
 @media (min-width: 961px) {
   .sp-nav {
     display: none;
